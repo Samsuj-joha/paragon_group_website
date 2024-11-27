@@ -60,7 +60,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="relative w-full h-screen">
+    <header className="relative w-full h-screen z-10">
       {/* Carousel */}
       <div className="absolute inset-0 overflow-hidden">
         <img

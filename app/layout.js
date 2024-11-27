@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
             <Header />
           </header>
 
-          <main className="container mx-auto">
+          <main >
             <div>{children}</div>
           </main>
           <footer>
