@@ -1,5 +1,3 @@
-
-# Paragon Group Website
 # Paragon Group Website
 
 -> DEADLINES <-
