@@ -1,6 +1,34 @@
 
 # Paragon Group Website
+# Paragon Group Website
 
+-> DEADLINES <-
+
+PHASE 1: Due Date
+- [ ] Navigation Bar
+- [ ] Home Page 
+- [ ] About Us Page (and CSR page)
+- [ ] Milestone Page
+- [ ] Footer Bar
+
+Notes:
+- These pages are pretty simple, keep in mind photo resolutions and image processing speeds. Reserach a bit how next can be used to optimize images and speed up the page load times.
+
+PHASE 2: Due Date
+- [ ] Businesss Activites ALL pages
+
+Tip: 
+- The business pages all have the same or similar layout, so you can use the same components for them. I recommend that you make one template component page that will be used for all the business pages. (NOTE: Some business pages have certificates to display, so for these pages you will need to add a bottom component specific to that template page. If any questions, ask me)
+
+PHASE 3: Due Date
+- [ ] Company Pages (ALL) pages
+
+
+PHASE 4: Due Date
+- [ ] Rest of the pages 
+- [ ] Full project delivery
+
+----------------------------------------------------------------------------------------------------------------------------------
 "Paragon Group is a modern, responsive website built with Next.js 14, Tailwind CSS, and Shadcn UI. It features fast performance, clean design, and SEO-friendly architecture. This repository contains the complete source code, offering a scalable foundation for high-quality web applications. Explore and contribute to its development!"
 
 ---
