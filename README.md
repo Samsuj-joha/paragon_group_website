@@ -2,7 +2,7 @@
 
 -> DEADLINES <-
 
-PHASE 1: Due Date  - 10/12/24
+PHASE 1: Due Date  - 2/12/24
 - [ ] Navigation Bar
 - [ ] Home Page 
 - [ ] About Us Page (and CSR page)
@@ -12,17 +12,17 @@ PHASE 1: Due Date  - 10/12/24
 Notes:
 - These pages are pretty simple, keep in mind photo resolutions and image processing speeds. Reserach a bit how next can be used to optimize images and speed up the page load times.
 
-PHASE 2: Due Date--- 18/12/24
+PHASE 2: Due Date--- 5/12/24
 - [ ] Businesss Activites ALL pages
 
 Tip: 
 - The business pages all have the same or similar layout, so you can use the same components for them. I recommend that you make one template component page that will be used for all the business pages. (NOTE: Some business pages have certificates to display, so for these pages you will need to add a bottom component specific to that template page. If any questions, ask me)
 
-PHASE 3: Due Date ---30/12/24
+PHASE 3: Due Date --- 6/12/24
 - [ ] Company Pages (ALL) pages
 
 
-PHASE 4: Due Date-- 10/01/25
+PHASE 4: Due Date-- 8/01/25
 - [ ] Rest of the pages 
 - [ ] Full project delivery
 
