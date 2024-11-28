@@ -1,13 +1,12 @@
 import React from 'react'
+import Home from './pages/home/page'
 
-const page = () => {
+const Paragon = () => {
   return (
     <div>
-      <h1 className='text-red-500'>Landing page</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Soluta nam eveniet consectetur pariatur hic ad excepturi libero, temporibus repudiandae eum.</p>
+      <Home/>
     </div>
   )
 }
 
-export default page
+export default Paragon
