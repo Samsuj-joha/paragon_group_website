@@ -71,6 +71,7 @@ import image2 from "/public/assets/images/home-image-2.jpg";
 import image3 from "/public/assets/images/home-image-3.png";
 import SectionThree from "./section3/page";
 import SectionFour from "./section 4/page";
+import Header from "@/layout/header/page";
 
 const Home = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -80,6 +81,8 @@ const Home = () => {
     setIsVideoOpen(!isVideoOpen);
   };
   return (
+    <>
+    <Header/>
     <div className="">
       {/* Section 1 */}
       <section className="bg-[#e6e6ea] w-full py-4 relative">
@@ -224,6 +227,7 @@ const Home = () => {
 
       <SectionFour/>
     </div>
+    </>
   );
 };
 

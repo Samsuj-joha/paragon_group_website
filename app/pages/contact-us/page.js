@@ -1,8 +1,11 @@
+import Header from '@/layout/header/page';
 import React from 'react';
 
 const ContactUs = () => {
   return (
-    <div className="bg-gray-100 py-16 px-4 md:px-8">
+ <>
+ <Header/>
+ <div className="bg-gray-100 py-16 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">Contact Us</h1>
@@ -80,6 +83,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+ </>
   );
 };
 
