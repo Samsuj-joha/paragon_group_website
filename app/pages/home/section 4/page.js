@@ -19,7 +19,7 @@ const SectionFour = () => {
         
         {/* View Button */}
         <Button
-          className="border hover:bg-blue-700 hover:text-white px-6 py-3 rounded-md text-lg"
+          className="border hover:bg-[#263e7a] hover:text-white px-6 py-3 rounded-md text-lg"
           onClick={handleClick} // Navigate to another page when clicked
         >
           View
