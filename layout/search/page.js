@@ -31,7 +31,7 @@ const SearchMenu = () => {
         {/* Search Icon Button */}
         <Button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded-none hover:bg-blue-700 transition duration-300"
+          className="bg-[#263e7a] text-white px-4 py-2 rounded-none hover:bg-blue-700 transition duration-300"
         >
           <Search className="h-5 w-5" />
         </Button>
