@@ -1,7 +1,4 @@
 
-
-
-
 "use client";
 
 import Link from "next/link";
@@ -101,6 +98,15 @@ const Navbar = () => {
               </ul>
             </div>
           )}
+        </li>
+
+        <li>
+          <Link
+            href="/pages/milestones"
+            className={`flex items-center space-x-1 ${isActive("/pages/milestones") ? "text-[#f3a019]" : "hover:text-[#f3a019]"}`}
+          >
+            Milestones
+          </Link>
         </li>
 
         {/* Business Activities Dropdown */}
@@ -206,3 +212,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
