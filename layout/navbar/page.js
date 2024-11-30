@@ -100,6 +100,15 @@ const Navbar = () => {
           )}
         </li>
 
+        <li>
+          <Link
+            href="/pages/milestones"
+            className={`flex items-center space-x-1 ${isActive("/pages/milestones") ? "text-[#f3a019]" : "hover:text-[#f3a019]"}`}
+          >
+            Milestones
+          </Link>
+        </li>
+
         {/* Business Activities Dropdown */}
         <li className="relative">
           <button
