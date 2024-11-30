@@ -38,7 +38,7 @@ const AboutHeader = () => {
       </div>
 
       {/* Image Section (Below Header) */}
-      <div className="relative mt-20"> {/* Adjust margin-top to accommodate header */}
+      <div className="relative mt-20 pt-2"> {/* Adjust margin-top to accommodate header */}
         <Image
           src="/assets/images/aboutHeader1.png"
           alt="Background"
