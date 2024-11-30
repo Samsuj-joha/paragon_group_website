@@ -1,5 +1,5 @@
 
-'use client'
+'use client';
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,28 +8,54 @@ import SearchMenu from "../search/page";
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [fadeAnimation, setFadeAnimation] = useState(false);
   const slides = [
-    "/carosel1.jpg", // Image 1
-    "/carosel2.jpg", // Image 2
-    "/carosel1.jpg", // Image 3
+    "/assets/images/landing-carosel/landing-page1.jpeg", // Image 1
+    "/assets/images/landing-carosel/landing-page2.jpeg", // Image 2
+    "/assets/images/landing-carosel/landing-page3.jpg",
+    "/assets/images/landing-carosel/landing-page4.jpg",
+    "/assets/images/landing-carosel/landing-page5.jpg",
+    "/assets/images/landing-carosel/landing-page6.png",
+    "/assets/images/landing-carosel/landing-page7.png",
+    "/assets/images/landing-carosel/landing-page8.jpg",
+    "/assets/images/landing-carosel/landing-page9.jpg" // Image 9
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      handleNextSlide();
     }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
+  const handleNextSlide = () => {
+    setFadeAnimation(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+      setFadeAnimation(false);
+    }, 300); // Animation duration
+  };
+
+  const handlePreviousSlide = () => {
+    setFadeAnimation(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+      setFadeAnimation(false);
+    }, 500); // Animation duration
+  };
+
   return (
     <header className="relative w-full h-screen z-10">
       {/* Carousel */}
-      <div className="absolute inset-0 overflow-hidden">
-        <img
+      <div className={`absolute inset-0 overflow-hidden transition-opacity duration-500 ${fadeAnimation ? "opacity-0" : "opacity-100"}`}>
+        <Image
           src={slides[currentIndex]}
-          alt="Slide"
-          className="w-full h-full object-cover transition-all duration-500"
+          alt={`Slide ${currentIndex + 1}`}
+          fill
+          priority
+          quality={100}
+          className="object-cover"
         />
       </div>
 
@@ -44,6 +70,8 @@ const Header = () => {
                 alt="Paragon Group"
                 height={100}
                 width={100}
+                quality={100}
+                priority
                 className="object-contain"
               />
             </Link>
@@ -63,13 +91,37 @@ const Header = () => {
 
       {/* Navigation Controls */}
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
-        <button onClick={() => setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length)} className="bg-black text-white p-3 rounded-full">
-          &lt;
+        <button
+          onClick={handlePreviousSlide}
+          className="bg-[#faa91d] text-white p-3 rounded-full hover:bg-opacity-90 shadow-lg transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
         </button>
       </div>
       <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
-        <button onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length)} className="bg-black text-white p-3 rounded-full">
-          &gt;
+        <button
+          onClick={handleNextSlide}
+          className="bg-[#faa91d] text-white p-3 rounded-full hover:bg-opacity-90 shadow-lg transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
         </button>
       </div>
     </header>
@@ -77,7 +129,4 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
 
