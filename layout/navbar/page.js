@@ -113,7 +113,7 @@ const Navbar = () => {
         <li className="relative">
           <button
             onClick={() => toggleDropdown("business")}
-            className={`flex items-center space-x-1 ${isActive("/pages/business-activities") ? "text-[#f3a019]" : "hover:text-[#f3a019]"}`}
+            className={`flex items-center space-x-1 ${isActive("/pages/business-/dropdown-menu") ? "text-[#f3a019]" : "hover:text-[#f3a019]"}`}
           >
             <span>Business Activities</span>
             <ChevronDown size={16} />
@@ -121,19 +121,19 @@ const Navbar = () => {
           {isBusinessDropdownOpen && (
             <div className="absolute left-0 bg-[#e47316] text-white shadow-md rounded-lg mt-2 w-72 z-50" ref={dropdownRef}>
               <ul className="space-y-2 py-2 h-72 overflow-y-scroll scrollbar-hidden">
-                <li><Link href="/pages/business-activities/poultry-farming" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Poultry Farming</Link></li>
-                <li><Link href="/pages/business-activities/processing-and-further-processing-plant" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Processing and Further Processing Plant</Link></li>
-                <li><Link href="/pages/business-activities/plastic-woven-bags-fibc" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Plastic Woven Bags & FIBC</Link></li>
-                <li><Link href="/pages/business-activities/tea-estates-horticulture" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Tea Estates & Horticulture</Link></li>
-                <li><Link href="/pages/business-activities/bistro-cafe-retail-shop" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Bistro Café & Retail Shop</Link></li>
-                <li><Link href="/pages/business-activities/renewable-energy" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Renewable Energy</Link></li>
-                <li><Link href="/pages/business-activities/feed-mills" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Feed Mills</Link></li>
-                <li><Link href="/pages/business-activities/consumer-foods" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Consumer Foods</Link></li>
-                <li><Link href="/pages/business-activities/fish-hatchery" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Fish Hatchery</Link></li>
-                <li><Link href="/pages/business-activities/organic-fertilizer" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Organic Fertilizer</Link></li>
-                <li><Link href="/pages/business-activities/flour-mill" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Flour Mill</Link></li>
-                <li><Link href="/pages/business-activities/footwear-manufacturing" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Footwear Manufacturing</Link></li>
-                <li><Link href="/pages/business-activities/dairy-project" className="block px-4 py-2 hover:text-white" onClick={closeDropdown}>Dairy Project</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/poultry-farming" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Poultry Farming</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/processing-and-further-processing-plant" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Processing and Further Processing Plant</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/plastic-woven-bags-fibc" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Plastic Woven Bags & FIBC</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/tea-estates-horticulture" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Tea Estates & Horticulture</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/bistro-cafe-retail-shop" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Bistro Café & Retail Shop</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/renewable-energy" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Renewable Energy</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/feed-mills" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Feed Mills</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/consumer-foods" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Consumer Foods</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/fish-hatchery" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Fish Hatchery</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/organic-fertilizer" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Organic Fertilizer</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/flour-mill" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Flour Mill</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/footwear-manufacturing" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Footwear Manufacturing</Link></li>
+                <li><Link href="/pages/business-activities/dropdown-menu/dairy-project" className="block px-4 py-2 hover:text-white" onClick={closeDropdown}>Dairy Project</Link></li>
               </ul>
             </div>
           )}
