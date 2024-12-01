@@ -1,9 +1,10 @@
 import React from 'react'
+import VideoGallary from './video-gallery/page'
 
 const Media = () => {
   return (
     <div>
-      <h1>Media page</h1>
+      <VideoGallary/>
     </div>
   )
 }
