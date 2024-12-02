@@ -119,8 +119,8 @@ const Navbar = () => {
             <ChevronDown size={16} />
           </button>
           {isBusinessDropdownOpen && (
-            <div className="absolute left-0 bg-[#e47316] text-white shadow-md rounded-lg mt-2 w-72 z-50" ref={dropdownRef}>
-              <ul className="space-y-2 py-2 h-72 overflow-y-scroll scrollbar-hidden">
+            <div className="absolute left-0 bg-[#e47316] text-white shadow-md rounded-lg mt-2 w-72 z-50  " ref={dropdownRef}>
+              <ul className="space-y-2 py-2 h-96 overflow-y-scroll scrollbar-hide">
                 <li><Link href="/pages/business-activities/dropdown-menu/poultry-farming" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Poultry Farming</Link></li>
                 <li><Link href="/pages/business-activities/dropdown-menu/processing-and-further-processing-plant" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Processing and Further Processing Plant</Link></li>
                 <li><Link href="/pages/business-activities/dropdown-menu/plastic-woven-bags-fibc" className="block px-4 py-2 hover:text-white border-b border-white" onClick={closeDropdown}>Plastic Woven Bags & FIBC</Link></li>
@@ -151,7 +151,7 @@ const Navbar = () => {
   </button>
   {isCompanyDropdownOpen && (
     <div className="absolute left-0 bg-[#e47316] text-white shadow-md rounded-lg mt-2 w-72 z-50" ref={dropdownRef}>
-      <ul className="space-y-2 py-2 h-72 overflow-y-scroll scrollbar-hidden">
+      <ul className="space-y-2 py-2 h-96 overflow-y-scroll scrollbar-hide">
         <li><Link href="/pages/companies/dropdown-menu/aqua-breeders-ltd" className={`block px-4 py-2 ${isActive('/pages/companies/dropdown-menu/aqua-breeders-ltd') ? 'text-[#f3a019]' : 'hover:text-white'} border-b border-white`} onClick={closeDropdown}>Aqua Breeders Ltd</Link></li>
         <li><Link href="/pages/companies/dropdown-menu/bay-chicks-ltd" className={`block px-4 py-2 ${isActive('/pages/companies/dropdown-menu/bay-chicks-ltd') ? 'text-[#f3a019]' : 'hover:text-white'} border-b border-white`} onClick={closeDropdown}>Bay Chicks Ltd</Link></li>
         <li><Link href="/pages/companies/dropdown-menu/bay-grand-parents-ltd" className={`block px-4 py-2 ${isActive('/pages/companies/dropdown-menu/bay-grand-parents-ltd') ? 'text-[#f3a019]' : 'hover:text-white'} border-b border-white`} onClick={closeDropdown}>Bay Grand Parents Ltd</Link></li>

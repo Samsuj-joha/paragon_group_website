@@ -9,24 +9,25 @@ import SearchMenu from "../search/page";
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fadeAnimation, setFadeAnimation] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const slides = [
-    "/assets/images/landing-carosel/landing-page1.jpeg", // Image 1
-    "/assets/images/landing-carosel/landing-page2.jpeg", // Image 2
+    "/assets/images/landing-carosel/landing-page1.jpeg",
+    "/assets/images/landing-carosel/landing-page2.jpeg",
     "/assets/images/landing-carosel/landing-page3.jpg",
     "/assets/images/landing-carosel/landing-page4.jpg",
     "/assets/images/landing-carosel/landing-page5.jpg",
     "/assets/images/landing-carosel/landing-page6.png",
     "/assets/images/landing-carosel/landing-page7.png",
     "/assets/images/landing-carosel/landing-page8.jpg",
-    "/assets/images/landing-carosel/landing-page9.jpg" // Image 9
+    "/assets/images/landing-carosel/landing-page9.jpg"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextSlide();
-    }, 5000); // Change every 5 seconds
+    }, 5000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   const handleNextSlide = () => {
@@ -34,7 +35,7 @@ const Header = () => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
       setFadeAnimation(false);
-    }, 300); // Animation duration
+    }, 300);
   };
 
   const handlePreviousSlide = () => {
@@ -42,7 +43,7 @@ const Header = () => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
       setFadeAnimation(false);
-    }, 500); // Animation duration
+    }, 300);
   };
 
   return (
@@ -68,8 +69,8 @@ const Header = () => {
               <Image
                 src="/paragongroup-logo.png"
                 alt="Paragon Group"
-                height={100}
-                width={100}
+                height={50}
+                width={50}
                 quality={100}
                 priority
                 className="object-contain"
@@ -77,17 +78,55 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Navbar Section */}
-          <div>
-            <Navbar />
+          {/* Hamburger Menu for Small Screens */}
+          <div className="md:hidden lg:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white bg-[#faa91d] p-2 rounded-md hover:bg-opacity-90"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
           </div>
 
-          {/* Search Section */}
-          <div>
+          {/* Navbar and SearchMenu for Large Screens */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <Navbar />
             <SearchMenu />
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-70 z-30 flex flex-col justify-center items-center space-y-6 text-white">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-4 right-4 bg-[#faa91d] p-2 rounded-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <Navbar />
+          <SearchMenu />
+        </div>
+      )}
 
       {/* Navigation Controls */}
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
@@ -129,4 +168,3 @@ const Header = () => {
 };
 
 export default Header;
-
