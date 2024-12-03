@@ -232,7 +232,7 @@ const Header = () => {
           </div>
 
           {/* Navbar and SearchMenu for Large Screens */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className=" lg:flex items-center space-x-6">
             <Navbar />
             <SearchMenu />
           </div>
