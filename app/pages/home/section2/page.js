@@ -32,21 +32,21 @@ const SectionTwo = ({ image2, image3 }) => {
 
         {/* Column 2: Statistics */}
         <div className="flex flex-col items-center md:items-start space-y-8 justify-center col-span-1 md:col-span-1 lg:col-span-2 lg:justify-center">
-          <div className="flex flex-col items-center md:items-start ">
-            <span className="text-blue-600 text-5xl font-extrabold">19</span>
-            <span className="text-xl font-medium text-gray-700">Companies</span>
+          <div className="flex flex-col items-center md:items-center lg:ml-10 ">
+            <span className="text-[#f58220] text-3xl font-semibold">19</span>
+            <span className="text-xl font-medium text-[#f58220]">Companies</span>
           </div>
-          <div className="flex flex-col items-center md:items-start">
-            <span className="text-blue-600 text-5xl font-extrabold">65</span>
-            <span className="text-xl font-medium text-gray-700">Projects</span>
+          <div className="flex flex-col items-center md:items-center lg:ml-10">
+            <span className="text-[#f58220] text-3xl font-semibold">65</span>
+            <span className="text-xl font-medium text-[#f58220]">Projects</span>
           </div>
-          <div className="flex flex-col items-center md:items-start">
-            <span className="text-blue-600 text-5xl font-extrabold">30</span>
-            <span className="text-xl font-medium text-gray-700">Locations</span>
+          <div className="flex flex-col items-center md:items-center lg:ml-10">
+            <span className="text-[#f58220] text-3xl font-semibold">30</span>
+            <span className="text-xl font-medium text-[#f58220]">Locations</span>
           </div>
-          <div className="flex flex-col items-center md:items-start">
-            <span className="text-blue-600 text-5xl font-extrabold">7700</span>
-            <span className="text-xl font-medium text-gray-700">Employees</span>
+          <div className="flex flex-col items-center md:items-center lg:ml-10">
+            <span className="text-[#f58220] text-3xl font-semibold">7700</span>
+            <span className="text-xl font-medium text-[#f58220]">Employees</span>
           </div>
         </div>
 
