@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/layout/footer/page";
 import ScrollToTopButton from "@/layout/scroll/page";
+import SocialMediaIcons from "@/layout/socail/page";
 
 
 // Local fonts
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
 
           {/* Scroll-to-Top Button component */}
           <ScrollToTopButton/>
+          <SocialMediaIcons/>
         </div>
       </body>
     </html>
