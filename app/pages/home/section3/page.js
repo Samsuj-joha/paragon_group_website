@@ -12,10 +12,10 @@ const SectionThree = () => {
     { title: "Feed Mills", description: "Description of activity 7.", imageSrc: '/assets/images/feedmil-images/header-image.jpg' },
     { title: "Consumer Foods", description: "Description of activity 8.", imageSrc: '/assets/images/consumer-food-images/header.jpg' },
     { title: "Fish Hatchery", description: "Description of activity 9.", imageSrc: '/assets/images/fish-hatchary-images/header.jpg' },
-    { title: "Organic Fertilizer", description: "Description of activity 10.", imageSrc: '/assets/images/organic-images/header.jpg' },
-    { title: "Flour Mill", description: "Description of activity 11.", imageSrc: '/public/assets/images/' },
-    { title: "Footwear Manufacturing", description: "Description of activity 12.", imageSrc: '/assets/images/cardImage12.jpg' },
-    { title: "Dairy Project", description: "Description of activity 12.", imageSrc: '/assets/images/cardImage12.jpg' }
+    { title: "Organic Fertilizer", description: "Description of activity 10.", imageSrc: '/assets/images/organic-images/organic-card.jpg' },
+    { title: "Flour Mill", description: "Description of activity 11.", imageSrc: '/assets/images/flour-images/flour-card.jpg' },
+    { title: "Footwear Manufacturing", description: "Description of activity 12.", imageSrc: '/assets/images/footware-images/footware-card.jpg' },
+    { title: "Dairy Project", description: "Description of activity 12.", imageSrc: '/assets/images/dairy-images/dairy-card.jpg' }
   ];
 
   return (
