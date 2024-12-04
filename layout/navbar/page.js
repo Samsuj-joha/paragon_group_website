@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <nav className="p-4">
-      <ul className="flex space-x-5 text-white">
+      <ul className="flex space-x-5 text-[#0e2b49] font-light">
         <li>
           <Link
             href="/pages/home"

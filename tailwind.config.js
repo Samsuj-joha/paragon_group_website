@@ -38,6 +38,10 @@ module.exports = {
         xl: '1280px', // Extra large screens and above
         '2xl': '1536px', // 2x Extra large screens and above
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        mono: ['"Geist Mono"', 'monospace'],
+      },
       animation: {
         fadeIn: 'fadeIn 2s ease-out', // Add custom fadeIn animation
         slideInLeft: 'slideInLeft 1s ease-out',
