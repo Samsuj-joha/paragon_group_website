@@ -1,185 +1,59 @@
-import React from 'react'
-import cardimage1 from '/public/assets/images/cardImage1.jpg'
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 const SectionThree = () => {
+  const activities = [
+    { title: "Poultry Farming", description: "Description of activity 1.", imageSrc: '/assets/images/cardImage1.jpg' },
+    { title: "Processing & Further Processing Plant", description: "Description of activity 2.", imageSrc: '/assets/images/processing-image/processing-header.jpg' },
+    { title: "Plastic Woven Bags & FIBC", description: "Description of activity 3.", imageSrc: '/assets/images/plastic-images/plastic-image-header.jpg' },
+    { title: "Tea Estates & Horticulture", description: "Description of activity 4.", imageSrc: '/assets/images/tea-images/tea-images-header.jpg' },
+    { title: "Bistro Cafe & Retail Shops", description: "Description of activity 5.", imageSrc: '/assets/images/bistro-images/bistro-image-header.jpg' },
+    { title: "Renewable Energy", description: "Description of activity 6.", imageSrc: '/assets/images/energy-images/energy-header.jpg' },
+    { title: "Feed Mills", description: "Description of activity 7.", imageSrc: '/assets/images/feedmil-images/header-image.jpg' },
+    { title: "Consumer Foods", description: "Description of activity 8.", imageSrc: '/assets/images/consumer-food-images/header.jpg' },
+    { title: "Fish Hatchery", description: "Description of activity 9.", imageSrc: '/assets/images/fish-hatchary-images/header.jpg' },
+    { title: "Organic Fertilizer", description: "Description of activity 10.", imageSrc: '/assets/images/organic-images/organic-card.jpg' },
+    { title: "Flour Mill", description: "Description of activity 11.", imageSrc: '/assets/images/flour-images/flour-card.jpg' },
+    { title: "Footwear Manufacturing", description: "Description of activity 12.", imageSrc: '/assets/images/footware-images/footware-card.jpg' },
+    { title: "Dairy Project", description: "Description of activity 12.", imageSrc: '/assets/images/dairy-images/dairy-card.jpg' }
+  ];
+
   return (
-    <section className="bg-[#dbeafe] w-full py-16">
-      <div className="container mx-auto px-6 md:px-12">
-        {/* Section Heading */}
-        <p className="text-3xl font-bold text-gray-800 mb-8 text-center">
+    <section className=" w-full py-16">
+      <div className="md:px-12">
+        <p className="text-3xl font-bold text-[#0e376c] mb-8 text-center">
           BUSINESS ACTIVITIES
         </p>
-
-        {/* Card with 4x4 Grid */}
+        
         <div className="rounded-lg p-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Row 1 */}
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 1"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 1</span>
-                <p className="mt-2">Description of activity 1.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 2"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 2</span>
-                <p className="mt-2">Description of activity 2.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 3"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 3</span>
-                <p className="mt-2">Description of activity 3.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 4"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 4</span>
-                <p className="mt-2">Description of activity 4.</p>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {activities.map((activity, index) => (
+              <div key={index} className="relative w-full h-[18rem] rounded-lg overflow-hidden cursor-pointer shadow-lg group transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-xl">
+                {/* Card Image */}
+                <div className="relative w-full h-1/2 overflow-hidden">
+                  <Image
+                    src={activity.imageSrc}
+                    height={200}
+                    width={300}
+                    alt={activity.title}
+                    className="object-cover w-full h-full opacity-90 transition-opacity duration-200 ease-out group-hover:opacity-100"
+                  />
+                </div>
 
-            {/* Row 2 */}
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 5"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
+                {/* Card Content */}
+                <div className="absolute bottom-0 left-0 right-0 w-full text-center bg-gradient-to-t from-[#0e376c] to-transparent p-6 rounded-b-lg opacity-100 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+                  <h2 className="text-white text-lg font-bold uppercase transition-all duration-300 ease-out group-hover:bottom-16">
+                    {activity.title}
+                  </h2>
+                  
+                </div>
               </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 5</span>
-                <p className="mt-2">Description of activity 5.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 6"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 6</span>
-                <p className="mt-2">Description of activity 6.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 7"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 7</span>
-                <p className="mt-2">Description of activity 7.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 8"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 8</span>
-                <p className="mt-2">Description of activity 8.</p>
-              </div>
-            </div>
-
-            {/* Row 3 */}
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 9"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 9</span>
-                <p className="mt-2">Description of activity 9.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 10"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 10</span>
-                <p className="mt-2">Description of activity 10.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 11"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 11</span>
-                <p className="mt-2">Description of activity 11.</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md">
-              <div className="relative overflow-hidden rounded-tl-lg rounded-tr-lg">
-                <Image
-                  src={cardimage1}
-                  alt="Activity 12"
-                  className="w-full h-[200px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                />
-              </div>
-              <div className="bg-[#263e7a] text-white p-4 w-full text-center rounded-b-lg">
-                <span className="text-xl font-semibold">Activity 12</span>
-                <p className="mt-2">Description of activity 12.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionThree
+export default SectionThree;

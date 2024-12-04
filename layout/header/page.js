@@ -266,7 +266,7 @@ const Header = () => {
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
         <button
           onClick={handlePreviousSlide}
-          className="bg-[#faa91d] text-white p-3 rounded-full hover:bg-opacity-90 shadow-lg transition-all duration-300"
+          className="bg-[#263e7a] hover:bg-[#faa91d] text-white p-3 rounded-full hover:bg-opacity-90 shadow-lg transition-all duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -283,7 +283,7 @@ const Header = () => {
       <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
         <button
           onClick={handleNextSlide}
-          className="bg-[#faa91d] text-white p-3 rounded-full hover:bg-opacity-90 shadow-lg transition-all duration-300"
+          className="bg-[#263e7a] hover:bg-[#faa91d] text-white p-3 rounded-full hover:bg-opacity-90 shadow-lg transition-all duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
