@@ -1,9 +1,7 @@
 "use client";
 import CsrHeader from "@/layout/csr-header/page";
-import Footer from "@/layout/footer/page";
-import Header from "@/layout/header/page";
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 const Csr = () => {
   const [activeSection, setActiveSection] = useState(1);
@@ -98,89 +96,95 @@ const Csr = () => {
       </section>
       {/* Second Section */}
       <section className="py-16 bg-gray-50">
-  <div className="container mx-auto px-4">
-    {/* Section Heading */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-[#123f8e] mb-6">
-        Our Focus Areas
-      </h2>
-    </div>
+        <div className="container mx-auto px-4">
+          {/* Section Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#123f8e] mb-6">
+              Our Focus Areas
+            </h2>
+          </div>
 
-    {/* Header Buttons */}
-    <div className="flex justify-center gap-4 mb-10">
-      <button
-        onClick={() => handleSectionClick(1)}
-        className={`text-lg px-6 py-3 rounded-md transition-all duration-300 ${
-          activeSection === 1
-            ? "bg-[#123f8e] text-white shadow-lg"
-            : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-        }`}
-      >
-        All
-      </button>
-      <button
-        onClick={() => handleSectionClick(2)}
-        className={`text-lg px-6 py-3 rounded-md transition-all duration-300 ${
-          activeSection === 2
-            ? "bg-[#123f8e] text-white shadow-lg"
-            : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-        }`}
-      >
-        Dental Camp
-      </button>
-      <button
-        onClick={() => handleSectionClick(3)}
-        className={`text-lg px-6 py-3 rounded-md transition-all duration-300 ${
-          activeSection === 3
-            ? "bg-[#123f8e] text-white shadow-lg"
-            : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-        }`}
-      >
-        Egg Feeding
-      </button>
-    </div>
+          {/* Header Buttons */}
+          <div className="flex justify-center gap-4 mb-10">
+            <button
+              onClick={() => handleSectionClick(1)}
+              className={`text-lg px-6 py-3 rounded-md transition-all duration-300 ${
+                activeSection === 1
+                  ? "bg-[#123f8e] text-white shadow-lg"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => handleSectionClick(2)}
+              className={`text-lg px-6 py-3 rounded-md transition-all duration-300 ${
+                activeSection === 2
+                  ? "bg-[#123f8e] text-white shadow-lg"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
+            >
+              Dental Camp
+            </button>
+            <button
+              onClick={() => handleSectionClick(3)}
+              className={`text-lg px-6 py-3 rounded-md transition-all duration-300 ${
+                activeSection === 3
+                  ? "bg-[#123f8e] text-white shadow-lg"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              }`}
+            >
+              Egg Feeding
+            </button>
+          </div>
 
-    {/* Image Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mx-auto">
-      {/* Show all cards */}
-      {(activeSection === 1 || activeSection === 2) && (
-        <div className="bg-white shadow-md rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 mx-auto">
-          <Image
-            src="/assets/images/csrImages/dental.jpg"
-            alt="Dental Camp"
-            width={500}
-            height={300}
-            className="object-cover w-full h-[200px]"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-semibold text-[#123f8e] mb-2">Dental Camp</h3>
-            <p className="text-sm text-gray-700">
-              We organize dental camps to provide free dental treatment and distribute oral hygiene materials.
-            </p>
+          {/* Image Cards */}
+          <div className="flex flex-wrap justify-center gap-8 mx-auto">
+            {/* Show all cards */}
+            {(activeSection === 1 || activeSection === 2) && (
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 w-full sm:w-1/2 lg:w-1/3 xl:w-2/5">
+                <Image
+                  src="/assets/images/csrImages/dental.jpg"
+                  alt="Dental Camp"
+                  width={500}
+                  height={300}
+                  className="object-cover w-full h-[200px]"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-[#123f8e] mb-2">
+                    Dental Camp
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    We organize dental camps to provide free dental treatment
+                    and distribute oral hygiene materials.
+                  </p>
+                </div>
+              </div>
+            )}
+            {(activeSection === 1 || activeSection === 3) && (
+              <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 w-full sm:w-1/2 lg:w-1/3 xl:w-2/5">
+                <Image
+                  src="/assets/images/csrImages/egg.jpg"
+                  alt="Egg Feeding"
+                  width={500}
+                  height={300}
+                  quality={100}
+                  className="object-cover w-full h-[200px] opacity-100"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold text-[#123f8e] mb-2">
+                    Egg Feeding
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    We distribute eggs and other nutritional food to
+                    underprivileged students regularly.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-      )}
-      {(activeSection === 1 || activeSection === 3) && (
-        <div className="bg-white shadow-md rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 mx-auto">
-          <Image
-            src="/assets/images/csrImages/egg.jpg"
-            alt="Egg Feeding"
-            width={500}
-            height={300}
-            className="object-cover w-full h-[200px]"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-semibold text-[#123f8e] mb-2">Egg Feeding</h3>
-            <p className="text-sm text-gray-700">
-              We distribute eggs and other nutritional food to underprivileged students regularly.
-            </p>
-          </div>
-        </div>
-      )}
-    </div>
-  </div>
-</section>
-
+      </section>
     </>
   );
 };
