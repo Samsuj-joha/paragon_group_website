@@ -177,17 +177,14 @@
 
 // export default VideoGallary;
 
+"use client"; // Ensure client-side rendering for this component
 
-
-
-"use client";
-
-import { useState } from "react";
+import MilestonesHeader from "@/layout/milestones-header/page"; // Assuming this is your header component
 import { PlayCircle } from "lucide-react"; // For the video icon
 import Image from "next/image";
-import MilestonesHeader from "@/layout/milestones-header/page"; // Assuming this is your header component
+import { useEffect, useState } from "react";
 
-const VideoGallery = () => {
+const VideoGallary = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false); // Modal state
   const [currentVideo, setCurrentVideo] = useState(null); // Store the current video URL
 
@@ -203,6 +200,24 @@ const VideoGallery = () => {
     setCurrentVideo(null);
   };
 
+  // Handling client-side dropdown logic (if needed)
+  useEffect(() => {
+    // If there's any dropdown logic, ensure it's executed only in the client-side
+    const dropdown = document.querySelector(".dropdown");
+    if (dropdown) {
+      dropdown.addEventListener("click", () => {
+        // Your dropdown logic here
+      });
+    }
+
+    return () => {
+      // Clean up event listener on component unmount
+      if (dropdown) {
+        dropdown.removeEventListener("click", () => {});
+      }
+    };
+  }, []);
+
   return (
     <div>
       <MilestonesHeader />
@@ -215,7 +230,9 @@ const VideoGallery = () => {
               <div
                 className="relative group cursor-pointer"
                 onClick={() =>
-                  openVideoModal("https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr")
+                  openVideoModal(
+                    "https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr"
+                  )
                 }
               >
                 <Image
@@ -234,7 +251,9 @@ const VideoGallery = () => {
               <div
                 className="relative group cursor-pointer"
                 onClick={() =>
-                  openVideoModal("https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr")
+                  openVideoModal(
+                    "https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr"
+                  )
                 }
               >
                 <Image
@@ -242,7 +261,7 @@ const VideoGallery = () => {
                   alt="Thumbnail 2"
                   width={400}
                   height={250}
-                  className="w-full h-full object-cover rounded-lg transition-all duration-300"
+                  className="w-full h-full object-cover rounded-lg transition-all duration-300 hover:opacity-0"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-300">
                   <PlayCircle className="h-12 w-12 text-white" />
@@ -253,7 +272,9 @@ const VideoGallery = () => {
               <div
                 className="relative group cursor-pointer"
                 onClick={() =>
-                  openVideoModal("https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr")
+                  openVideoModal(
+                    "https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr"
+                  )
                 }
               >
                 <Image
@@ -274,7 +295,9 @@ const VideoGallery = () => {
               <div
                 className="relative group cursor-pointer"
                 onClick={() =>
-                  openVideoModal("https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr")
+                  openVideoModal(
+                    "https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr"
+                  )
                 }
               >
                 <Image
@@ -293,7 +316,9 @@ const VideoGallery = () => {
               <div
                 className="relative group cursor-pointer"
                 onClick={() =>
-                  openVideoModal("https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr")
+                  openVideoModal(
+                    "https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr"
+                  )
                 }
               >
                 <Image
@@ -301,7 +326,7 @@ const VideoGallery = () => {
                   alt="Thumbnail 2"
                   width={400}
                   height={250}
-                  className="w-full h-full object-cover rounded-lg transition-all duration-300"
+                  className="w-full h-full object-cover rounded-lg transition-all duration-300 hover:opacity-0"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-300">
                   <PlayCircle className="h-12 w-12 text-white" />
@@ -312,7 +337,9 @@ const VideoGallery = () => {
               <div
                 className="relative group cursor-pointer"
                 onClick={() =>
-                  openVideoModal("https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr")
+                  openVideoModal(
+                    "https://www.youtube.com/embed/5khq1mUzNKU?si=MQFAKULO0dIu9fbr"
+                  )
                 }
               >
                 <Image
@@ -357,5 +384,4 @@ const VideoGallery = () => {
   );
 };
 
-export default VideoGallery;
-
+export default VideoGallary;
