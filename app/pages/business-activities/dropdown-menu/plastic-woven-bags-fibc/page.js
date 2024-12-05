@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import PlasticHeader from "@/layout/plastic-header/page";
+import FocusAreasSection from "../processing-and-further-processing-plant/focus-area/page";
 
 // Modal Component for Video
 const VideoModal = ({ isOpen, onClose }) => {
@@ -26,7 +27,7 @@ const VideoModal = ({ isOpen, onClose }) => {
   );
 };
 
-const PoultryFarming = () => {
+const PlasticWoven = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState(1); // State to track which section is active
 
@@ -45,40 +46,39 @@ const PoultryFarming = () => {
 
   return (
     <>
-      <PlasticHeader/>
+      <PlasticHeader />
 
-      {/* first section */}
+      {/* First section */}
       <section className="py-16">
-        <div className="container mx-auto">
-          <div className="flex gap-10">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-start gap-10">
             <div className="w-full md:w-1/2 relative">
               <Image
                 src="/assets/images/plastic-images/plastic-image1.jpg"
-                alt="Poultry Farming"
-                layout="responsive"
+                alt="Plastic Woven Bags"
                 width={1600}
                 height={900}
-                className="object-cover"
+                layout="responsive"
+                className="object-cover rounded-lg transition-transform transform hover:scale-105"
               />
               <div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white cursor-pointer"
                 onClick={openModal}
               >
-                <span className="text-6xl">▶</span> {/* Video Icon */}
+                <span className="text-6xl animate-pulse">▶</span>{" "}
+                {/* Video Icon */}
               </div>
             </div>
 
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-semibold mb-4">Plastic Woven Bags & FIBC</h2>
-              <p className="text-lg mb-4">
-                Established in 1993, Paragon Poultry is one of the top three poultry
-                farmers in Bangladesh. Our farms are strategically located across
-                the country in remote areas, away from biological hazards, and
-                pollution to facilitate the best environment for high-quality day-old poultry.
+            <div className="w-full md:w-1/2 text-justify">
+              <h2 className="text-3xl font-semibold mb-4 ">
+                Plastic Woven Bags & FIBC
+              </h2>
+              <p className="text-md mb-4">
+              In 2007, Paragon launched its first plastic woven bag manufacturing unit in the heart of Gazipur, Dhaka, manufacturing small woven bags, FIBCs, and poly bags.
               </p>
-              <p className="text-lg">
-                Furthermore, we also produce commercial layers and broilers for
-                direct consumers to ensure safe, sustainable poultry meat and eggs.
+              <p className="text-md pt-4">
+              We are proud to serve clients across the globe to outperform the competition and stay ahead of the latest packaging innovation curve with the help of competitive pricing and modern innovation. Our factory is certified with QMS 9001 (quality management system), FSCC 22000 (Food grade), Halal certification, and SMETA. Furthermore, we strictly maintain a solid environmental policy as all our factories have a minimum to zero waste management system by recycling process waste and harvesting rainwater.
               </p>
             </div>
           </div>
@@ -88,104 +88,10 @@ const PoultryFarming = () => {
       {/* Modal for Video */}
       <VideoModal isOpen={isModalOpen} onClose={closeModal} />
 
-      {/* second section */}
-      <section className="py-16">
-        <div className="container mx-auto text-center mb-10">
-          <h2 className="text-3xl font-semibold mb-4">Our Focus Areas</h2>
-          <div className="flex justify-center gap-10">
-            {/* Header buttons */}
-            <button
-              onClick={() => handleSectionClick(1)}
-              className={`text-xl px-6 py-2 rounded-md ${activeSection === 1 ? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`}
-            >
-              Business Operations
-            </button>
-            <button
-              onClick={() => handleSectionClick(2)}
-              className={`text-xl px-6 py-2 rounded-md ${activeSection === 2 ? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`}
-            >
-              Product Category
-            </button>
-            <button
-              onClick={() => handleSectionClick(3)}
-              className={`text-xl px-6 py-2 rounded-md ${activeSection === 3 ? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`}
-            >
-              Business Units
-            </button>
-          </div>
-        </div>
-
-        {/* Conditional Content Rendering based on Active Section */}
-        <div className="container mx-auto flex gap-10">
-          {/* Left side with image */}
-          <div className="w-full md:w-1/2 relative">
-            {activeSection === 1 && (
-              <Image
-                src="/assets/images/plastic-images/plastic-image2.jpg"
-                alt="Business Operations"
-                width={1600} // Fixed width
-                height={900} // Fixed height
-                className="object-cover w-full h-[300px]" // Set consistent height
-              />
-            )}
-            {activeSection === 2 && (
-              <Image
-                src="/assets/images/plastic-images/plastic-image3.jpg"
-                alt="Product Category"
-                width={1600} // Fixed width
-                height={900} // Fixed height
-                className="object-cover w-full h-[300px]" // Set consistent height
-              />
-            )}
-            {activeSection === 3 && (
-              <Image
-                src="/assets/images/plastic-images/plastic-image4.jpg"
-                alt="Business Units"
-                width={1600} // Fixed width
-                height={900} // Fixed height
-                className="object-cover w-full h-[300px]" // Set consistent height
-              />
-            )}
-          </div>
-
-          {/* Right side with content */}
-          <div className="w-full md:w-1/2">
-            {activeSection === 1 && (
-              <>
-                <h3 className="text-2xl font-semibold mb-4">Business Operations</h3>
-                <p className="text-lg">
-                  Paragon Poultry operates state-of-the-art poultry farms with
-                  strict biosecurity measures to ensure the health and quality of
-                  our poultry. Our facilities are equipped with the latest technology
-                  to manage feeding, monitoring, and care.
-                </p>
-              </>
-            )}
-            {activeSection === 2 && (
-              <>
-                <h3 className="text-2xl font-semibold mb-4">Product Category</h3>
-                <p className="text-lg">
-                  We provide a variety of poultry products, including day-old
-                  layers, broilers, and colored birds. We also offer poultry meat
-                  and eggs for direct consumers, ensuring high quality and sustainability.
-                </p>
-              </>
-            )}
-            {activeSection === 3 && (
-              <>
-                <h3 className="text-2xl font-semibold mb-4">Business Units</h3>
-                <p className="text-lg">
-                  Our business units cover a wide range of services, including
-                  breeding, hatching, processing, and distribution, ensuring a
-                  streamlined operation from farm to table.
-                </p>
-              </>
-            )}
-          </div>
-        </div>
-      </section>
+      {/* Second Section - Focus Areas */}
+      <FocusAreasSection />
     </>
   );
 };
 
-export default PoultryFarming;
+export default PlasticWoven;
