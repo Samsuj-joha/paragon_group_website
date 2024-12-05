@@ -30,7 +30,7 @@ const MilestonesHeader = () => {
           </div>
 
           {/* Navbar and SearchMenu for Large Screens */}
-          <div className="nav-item lg:flex items-center space-x-6 hidden">
+          <div className="nav-item lg:flex items-center space-x-6">
             <Navbar />
             <SearchMenu />
           </div>
