@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { Search } from "lucide-react"; 
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-react";
+import { useState } from "react";
 
 const SearchMenu = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -25,13 +25,13 @@ const SearchMenu = () => {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search for anything..."
-          className="rounded-none border-none focus-visible:ring-0 focus-visible:outline-none flex-grow px-4 py-2 text-sm text-gray-700 placeholder-gray-500"
+          className="rounded-none border-none focus-visible:ring-0 focus-visible:outline-none flex-grow px-4 py-1 text-sm text-gray-700 placeholder-black-900 "
         />
 
         {/* Search Icon Button */}
         <Button
           type="submit"
-          className="bg-[#263e7a] text-white px-4 py-2 rounded-none hover:bg-blue-700 transition duration-300"
+          className="bg-[#263e7a] text-white px-4 py-4 rounded-none hover:bg-blue-700 transition duration-300"
         >
           <Search className="h-5 w-5" />
         </Button>

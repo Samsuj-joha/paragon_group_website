@@ -61,7 +61,7 @@ const Header = () => {
       </div>
 
       {/* Fixed Header Content */}
-      <div className="fixed top-0 left-0 right-0 z-20 bg-opacity-70 bg-[#263e7a] p-4">
+      <div className="fixed top-0 left-0 right-0 z-20 bg-opacity-100 bg-[rgba(255,255,255,1.0)] p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo Section */}
           <div>
@@ -69,8 +69,8 @@ const Header = () => {
               <Image
                 src="/paragongroup-logo.png"
                 alt="Paragon Group"
-                height={50}
-                width={50}
+                height={100}
+                width={100}
                 quality={100}
                 priority
                 className="object-contain"
@@ -98,7 +98,7 @@ const Header = () => {
           </div>
 
           {/* Navbar and SearchMenu for Large Screens */}
-          <div className=" lg:flex items-center space-x-6">
+          <div className="nav-item lg:flex items-center space-x-6">
             <Navbar />
             <SearchMenu />
           </div>
@@ -107,7 +107,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-70 z-30 flex flex-col justify-center items-center space-y-6 text-white">
+        <div className="fixed top-0 left-0 w-full h-screen bg-[#026ab5] bg-opacity-100 z-30 flex flex-col justify-center items-center space-y-6 text-white">
           <button
             onClick={() => setMenuOpen(false)}
             className="absolute top-4 right-4 bg-[#faa91d] p-2 rounded-md"

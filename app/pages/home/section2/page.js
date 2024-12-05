@@ -12,7 +12,7 @@ const SectionTwo = ({ image2, image3 }) => {
 
   return (
     <section className="bg-[#ffffff] w-full py-16">
-      <div className="container mx-auto md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="container mx-auto md:px-12 grid grid-cols-1  lg:grid-cols-12 gap-8">
         {/* Column 1: Image with Video Icon */}
         <div className="relative flex justify-center col-span-1 md:col-span-1 lg:col-span-5 transition-transform duration-500 ease-in-out transform hover:scale-95">
           <Image
@@ -31,7 +31,7 @@ const SectionTwo = ({ image2, image3 }) => {
         </div>
 
         {/* Column 2: Statistics */}
-        <div className="flex flex-col items-center md:items-start space-y-8 justify-center col-span-1 md:col-span-1 lg:col-span-2 lg:justify-center">
+        <div className="flex flex-col items-center md:items-center space-y-8 justify-center col-span-1 md:col-span-1 lg:col-span-2 lg:justify-center">
           <div className="flex flex-col items-center md:items-center lg:ml-10 ">
             <span className="text-[#f58220] text-3xl font-semibold">19</span>
             <span className="text-xl font-medium text-[#f58220]">
