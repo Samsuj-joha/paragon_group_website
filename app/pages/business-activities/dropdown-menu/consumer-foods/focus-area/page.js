@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const FocusAreasFeed = () => {
+const FocusAreasFood = () => {
   const [activeSection, setActiveSection] = useState(1);
 
   const handleSectionClick = (section) => {
@@ -70,7 +70,7 @@ const FocusAreasFeed = () => {
           >
             {activeSection === 1 && (
               <Image
-                src="/assets/images/feedmil-images/image2.png"
+                src="/assets/images/consumer-food-images/image2.jpg"
                 alt="Business Operations"
                 width={1600}
                 height={400}
@@ -79,7 +79,7 @@ const FocusAreasFeed = () => {
             )}
             {activeSection === 2 && (
               <Image
-                src="/assets/images/feedmil-images/image3.jpg"
+                src="/assets/images/consumer-food-images/image3.jpg"
                 alt="Product Category"
                 width={1600}
                 height={400}
@@ -88,7 +88,7 @@ const FocusAreasFeed = () => {
             )}
             {activeSection === 3 && (
               <Image
-                src="/assets/images/feedmil-images/image4.png"
+                src="/assets/images/consumer-food-images/image4.png"
                 alt="Business Units"
                 width={1600}
                 height={400}
@@ -109,39 +109,31 @@ const FocusAreasFeed = () => {
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
                 Business Operations
               </h3>
-              <p className="text-md text-gray-500 pb-5">
-                In total, Paragon Group runs 16 lines in 6 locations under its
-                concerns. Those are-
+              <p className="text-md text-gray-500 pb-5 font-semibold">
+                Paragon has three different plant for process, further process &
+                dry food unit. All units located in Ashulia, Savar. Paragon has
+                its own delivery chain through which it is delivering its
+                products to consumers end.
+              </p>
+              <p className="text-md text-gray-500 pb-5 font-semibold">
+                Currently processing
               </p>
 
               <li className="text-sm text-gray-500">
                 {" "}
-                Paragon Poultry Limited (Feed division), Gazipur.
+                Process Chicken production capacity: 1000 pcs birds dressed per
+                hour
               </li>
               <li className="text-sm text-gray-500">
                 {" "}
-                Denm Poultry Limited (Feed division), Kapasia.
+                Further process production capacity: 5000 kg per day with
+                different product categories
               </li>
               <li className="text-sm text-gray-500">
                 {" "}
-                Paragon Feed Limited, (Unit-2), Savar.
+                Dry food production capacity : 5000 kg per day with different
+                product categories
               </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Jessore Feed Limited, Jessore.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Chittagong Feed Limited, Chattogram.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Rangpur Poultry Limited (Feed division), Rangpur.
-              </li>
-              <p className="text-md text-gray-500 pt-5">
-                The company’s operations are spread throughout the country, with
-                plans to expand more operational units in the future.
-              </p>
             </motion.div>
           )}
           {activeSection === 2 && (
@@ -153,36 +145,32 @@ const FocusAreasFeed = () => {
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
                 Product Category
               </h3>
-              <p className="text-md text-gray-600 text-justify">
-                Paragon is producing wide range of feed in Poultry, Fish and
-                Cattle industry.
+              <p className="text-md text-gray-600 text-justify py-2">
+                In Paragon Agro’s process, further process, Dry food unit,
+                varieties of product are being processed in different form. Like
               </p>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Poultry Feed –</strong> Boiler feed, Layer feed & Sonali
-                feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong> Fish Feed– </strong>Flouting fish feed & Sinking fish
-                feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Shrimp Feed.</strong>
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Cattle Feed–</strong> Lactating feed & Fattening feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Duck Feed.</strong>
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Quail Feed.</strong>
-              </li>
+              <p className="text-md text-gray-600 text-justify py-2">
+                <strong> Processing unit:</strong> Whole chicken (with and
+                without skin), Chicken breast boneless, Chicken leg boneless,
+                Chicken drumstick, Chicken thigh, Chicken wings etc.
+              </p>
+
+              <p className="text-md text-gray-600 text-justify py-2">
+                <strong> Further process unit:</strong> In its portfolio, the
+                company produces Chicken Nugget, Chicken Sausage, Beef Sausage,
+                Chicken Burger Patty, Shami Kabab, Chicken Meatball, Chicken
+                Ball, Chicken Strip, Chicken Hot & Spicy Wings, Chicken Popcorn,
+                Chicken Lollipop, Chicken Spring Roll, Red Wheat Ruti, Paratha,
+                Dalpuri, Chicken Samusa, Crispy chicken , Spicy chicken and
+                different types of Momo.
+              </p>
+
+              <p className="text-md text-gray-600 text-justify py-2">
+                <strong> Dry food unit:</strong> In its portfolio, the company
+                produces Plain Cake , Muffin Cake, Cup Cake, different flavored
+                Cookies, Toast biscuits , Chanachur, Motor Bhaja, Dal Bhaja,
+                Sweets, Pastry Cake and different types of special cookies.
+              </p>
             </motion.div>
           )}
           {activeSection === 3 && (
@@ -194,39 +182,19 @@ const FocusAreasFeed = () => {
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
                 Business Units
               </h3>
-              <p className="text-md text-gray-500 pb-5">
-                In total, Paragon Group runs 16 lines in 6 locations under its
-                concerns. Those are-
-              </p>
 
-              <li className="text-sm text-gray-500">
+              <li className="text-sm text-gray-500 list-decimal">
                 {" "}
-                Paragon Poultry Limited (Feed division), Gazipur.
+                Process Plant
               </li>
-              <li className="text-sm text-gray-500">
+              <li className="text-sm text-gray-500 list-decimal">
                 {" "}
-                Denm Poultry Limited (Feed division), Kapasia.
+                Further Process Plant
               </li>
-              <li className="text-sm text-gray-500">
+              <li className="text-sm text-gray-500 list-decimal">
                 {" "}
-                Paragon Feed Limited, (Unit-2), Savar.
+                Dry Food unit
               </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Jessore Feed Limited, Jessore.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Chittagong Feed Limited, Chattogram.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Rangpur Poultry Limited (Feed division), Rangpur.
-              </li>
-              <p className="text-md text-gray-500 pt-5">
-                The company’s operations are spread throughout the country, with
-                plans to expand more operational units in the future.
-              </p>
             </motion.div>
           )}
         </div>
@@ -235,4 +203,4 @@ const FocusAreasFeed = () => {
   );
 };
 
-export default FocusAreasFeed;
+export default FocusAreasFood;

@@ -30,7 +30,7 @@ const DairyHeader = () => {
           </div>
 
           {/* Navbar and SearchMenu for Large Screens */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="nav-item lg:flex items-center space-x-6">
             <Navbar />
             <SearchMenu />
           </div>
@@ -90,7 +90,7 @@ const DairyHeader = () => {
       {/* Background Image Section */}
       <div className="relative mt-20 pt-2">
         <Image
-          src="/assets/images/dairy/header.jpg"
+          src="/assets/images/dairy-images/dairy-card.jpg"
           alt="Dairy Header Background"
           layout="responsive"
           width={1600}

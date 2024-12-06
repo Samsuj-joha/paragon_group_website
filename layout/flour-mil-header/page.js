@@ -29,7 +29,7 @@ const FlourMillHeader = () => {
           </div>
 
           {/* Navbar and SearchMenu for Large Screens */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="nav-item lg:flex items-center space-x-6">
             <Navbar />
             <SearchMenu />
           </div>
@@ -81,7 +81,7 @@ const FlourMillHeader = () => {
       {/* Background Image Section */}
       <div className="relative mt-20 pt-2">
         <Image
-          src="/assets/images/flour/header.jpg"
+          src="/assets/images/flour-images/flour-card.jpg"
           alt="Flour Mill Background"
           layout="responsive"
           width={1600}

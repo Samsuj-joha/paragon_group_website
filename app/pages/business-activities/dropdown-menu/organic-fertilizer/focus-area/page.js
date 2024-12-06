@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const FocusAreasFeed = () => {
+const FocusAreasOrganic = () => {
   const [activeSection, setActiveSection] = useState(1);
 
   const handleSectionClick = (section) => {
@@ -28,7 +28,7 @@ const FocusAreasFeed = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Business Operations
+            Farming application
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(2)}
@@ -40,7 +40,7 @@ const FocusAreasFeed = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Product Category
+           Comparison
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(3)}
@@ -52,7 +52,7 @@ const FocusAreasFeed = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Business Units
+            Our Location
           </motion.button>
         </div>
       </div>
@@ -70,7 +70,7 @@ const FocusAreasFeed = () => {
           >
             {activeSection === 1 && (
               <Image
-                src="/assets/images/feedmil-images/image2.png"
+                src="/assets/images/organic-images/image2.jpg"
                 alt="Business Operations"
                 width={1600}
                 height={400}
@@ -79,7 +79,7 @@ const FocusAreasFeed = () => {
             )}
             {activeSection === 2 && (
               <Image
-                src="/assets/images/feedmil-images/image3.jpg"
+                src="/assets/images/organic-images/image3.jpg"
                 alt="Product Category"
                 width={1600}
                 height={400}
@@ -107,41 +107,22 @@ const FocusAreasFeed = () => {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Business Operations
+              Farming application
               </h3>
-              <p className="text-md text-gray-500 pb-5">
-                In total, Paragon Group runs 16 lines in 6 locations under its
-                concerns. Those are-
+              <p className="text-md text-gray-500 pb-8">
+              In organic farming, a compromise between the use of artificial and organic fertilizers is common, often using inorganic fertilizers supplemented with the application of organics that are readily available such as the return of crop residues or the application of manure.
+              </p>
+              <p className="text-md text-gray-500 pb-8">
+              Cover crops are also grown to enrich soil as a green manure through nitrogen fixation from the atmosphere; as well as phosphorus (through nutrient mobilization) content of soils.
+              </p>
+              <p className="text-md text-gray-500 pb-8">
+              Fertilizer trees aid organic farming by bringing nutrients from the depths of the soil, and by assisting in the regulation of water usage.
+              </p>
+              <p className="text-md text-gray-500 pb-8">
+              Leguminous cover crops or fertilizer trees are also grown to enrich soil as a green manure through nitrogen fixation from the atmosphere; as well as phosphorus (through nutrient mobilization) content of soils.
               </p>
 
-              <li className="text-sm text-gray-500">
-                {" "}
-                Paragon Poultry Limited (Feed division), Gazipur.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Denm Poultry Limited (Feed division), Kapasia.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Paragon Feed Limited, (Unit-2), Savar.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Jessore Feed Limited, Jessore.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Chittagong Feed Limited, Chattogram.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Rangpur Poultry Limited (Feed division), Rangpur.
-              </li>
-              <p className="text-md text-gray-500 pt-5">
-                The company’s operations are spread throughout the country, with
-                plans to expand more operational units in the future.
-              </p>
+              
             </motion.div>
           )}
           {activeSection === 2 && (
@@ -151,38 +132,24 @@ const FocusAreasFeed = () => {
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Product Category
+              Comparison
               </h3>
-              <p className="text-md text-gray-600 text-justify">
-                Paragon is producing wide range of feed in Poultry, Fish and
-                Cattle industry.
+              <p className="text-md text-gray-600 text-justify  pt-5">
+              In general, the nutrients in organic fertilizer are both more diluted and also much less readily available to plants. This may be however desired as a form of slow-release fertilizer containing insoluble nitrogen. By their nature, organic fertilizers increase physical and biological nutrient storage mechanisms in soils, mitigating risks of over-fertilization. Organic fertilizer nutrient content, solubility, and nutrient release rates are typically much lower than mineral (inorganic) fertilizers. A University of North Carolina study found that potential mineralizable nitrogen (PMN) in the soil was 182–285% higher in organic mulched systems than in the synthetics control.
               </p>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Poultry Feed –</strong> Boiler feed, Layer feed & Sonali
-                feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong> Fish Feed– </strong>Flouting fish feed & Sinking fish
-                feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Shrimp Feed.</strong>
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Cattle Feed–</strong> Lactating feed & Fattening feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Duck Feed.</strong>
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Quail Feed.</strong>
-              </li>
+              <p className="text-md text-gray-600 text-justify  pt-5">
+              There do exist 'fast-release' organic fertilizers with a risk of fertilizer burn. These include uncomposted animal manures, fish emulsion, blood meal, and urine. Composting converts nitrogen in these sources into more stable forms (with some loss).
+              Soil biology
+              </p>
+              <p className="text-md text-gray-600 text-justify  pt-5">
+              Organic fertilizers have been known to improve biodiversity (soil life) and long-term productivity of soil, and may prove a large depository for excess carbon dioxide.
+              </p>
+              <p className="text-md text-gray-600 text-justify  pt-5">
+              Organic nutrients increase the abundance of soil organisms by providing organic matter and micronutrients for organismal relationships such as fungal mycorrhiza, (which aid plants in absorbing nutrients), and can drastically reduce external inputs of pesticides, energy and fertilizer, at the cost of decreased yield.
+              </p>
+              <p className="text-md text-gray-600 text-justify  pt-5">
+              Organic fertilizers from composts and other sources can be quite variable from one batch to the next. Without batch testing, amounts of applied nutrient cannot be precisely known. Nevertheless, one or more studies have shown they are at least as effective as chemical fertilizers over longer periods of use.
+              </p>
             </motion.div>
           )}
           {activeSection === 3 && (
@@ -235,4 +202,4 @@ const FocusAreasFeed = () => {
   );
 };
 
-export default FocusAreasFeed;
+export default FocusAreasOrganic;
