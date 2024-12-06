@@ -29,7 +29,7 @@ const FootwareHeader = () => {
           </div>
 
           {/* Navbar and SearchMenu for Large Screens */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="nav-item lg:flex items-center space-x-6">
             <Navbar />
             <SearchMenu />
           </div>
@@ -81,7 +81,7 @@ const FootwareHeader = () => {
       {/* Background Image Section */}
       <div className="relative mt-20 pt-2">
         <Image
-          src="/assets/images/footware/header.jpg"
+          src="/assets/images/footware-images/footware-card.jpg"
           alt="Footwear Header"
           layout="responsive"
           width={1600}

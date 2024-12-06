@@ -86,7 +86,7 @@ const OrganicHeader = () => {
       {/* Background Image Section */}
       <div className="relative mt-20 pt-2">
         <Image
-          src="/assets/images/organic-images/header.jpg"
+          src="/assets/images/organic-images/organic-card.jpg"
           alt="Organic Header"
           layout="responsive"
           width={1600}

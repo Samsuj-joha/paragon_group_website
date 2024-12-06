@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import PlasticHeader from "@/layout/plastic-header/page";
-import BistroHeader from "@/layout/bistro-header/page";
 import FishHatcharyHeader from "@/layout/fish-hatchary-header/page";
+import FocusAreasFish from "./focus-area/page";
 
 // Modal Component for Video
 const VideoModal = ({ isOpen, onClose }) => {
@@ -30,7 +30,6 @@ const VideoModal = ({ isOpen, onClose }) => {
 
 const Fish = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(1); // State to track which section is active
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -40,49 +39,54 @@ const Fish = () => {
     setIsModalOpen(false);
   };
 
-  // Handle section click to change active section
-  const handleSectionClick = (sectionNumber) => {
-    setActiveSection(sectionNumber);
-  };
-
   return (
     <>
-      <FishHatcharyHeader/>
+      <FishHatcharyHeader />
 
-      {/* first section */}
+      {/* First Section */}
       <section className="py-16">
-        <div className="container mx-auto">
-          <div className="flex gap-10">
-            <div className="w-full md:w-1/2 relative">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-10 items-center">
+            {/* Left Section (Image with Video Modal Trigger) */}
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2 relative"
+            >
               <Image
-                src="/assets/images/fish-hatchary-images/header.jpg"
-                alt="Poultry Farming"
+                src="/assets/images/fish-hatchary-images/image1.jpg"
+                alt="Fish Hatchery"
                 layout="responsive"
                 width={1600}
                 height={900}
-                className="object-cover"
+                className="object-cover rounded-md shadow-md"
               />
               <div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white cursor-pointer"
                 onClick={openModal}
               >
-                <span className="text-6xl">▶</span> {/* Video Icon */}
+                <span className="text-6xl">▶</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl font-semibold mb-4">Bistro Cafe & Retail Shops</h2>
-              <p className="text-lg mb-4">
-                Established in 1993, Paragon Poultry is one of the top three poultry
-                farmers in Bangladesh. Our farms are strategically located across
-                the country in remote areas, away from biological hazards, and
-                pollution to facilitate the best environment for high-quality day-old poultry.
+            {/* Right Section (Text) */}
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="w-full md:w-1/2"
+            >
+              <h2 className="text-3xl font-semibold mb-4">Fish Hatchery</h2>
+              <p className="text-md mb-4 text-gray-600 text-justify">
+                A fish hatchery is a place for artificial breeding, hatching, and rearing through the early life stages of animals such as finfish and shellfish. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size.
               </p>
-              <p className="text-lg">
-                Furthermore, we also produce commercial layers and broilers for
-                direct consumers to ensure safe, sustainable poultry meat and eggs.
+              <p className="text-md text-gray-600 text-justify">
+                The value of global aquaculture farming is estimated to be US$98.4 billion in 2008 with China significantly dominating the market. However, the value of aquaculture hatchery and nursery production has yet to be estimated. Additional hatchery production for small-scale domestic uses or conservation programs is also significant, particularly in South-East Asia.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -90,102 +94,8 @@ const Fish = () => {
       {/* Modal for Video */}
       <VideoModal isOpen={isModalOpen} onClose={closeModal} />
 
-      {/* second section */}
-      <section className="py-16">
-        <div className="container mx-auto text-center mb-10">
-          <h2 className="text-3xl font-semibold mb-4">Our Focus Areas</h2>
-          <div className="flex justify-center gap-10">
-            {/* Header buttons */}
-            <button
-              onClick={() => handleSectionClick(1)}
-              className={`text-xl px-6 py-2 rounded-md ${activeSection === 1 ? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`}
-            >
-              Business Operations
-            </button>
-            <button
-              onClick={() => handleSectionClick(2)}
-              className={`text-xl px-6 py-2 rounded-md ${activeSection === 2 ? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`}
-            >
-              Product Category
-            </button>
-            <button
-              onClick={() => handleSectionClick(3)}
-              className={`text-xl px-6 py-2 rounded-md ${activeSection === 3 ? "bg-blue-500 text-white" : "bg-gray-200 text-black"}`}
-            >
-              Business Units
-            </button>
-          </div>
-        </div>
-
-        {/* Conditional Content Rendering based on Active Section */}
-        <div className="container mx-auto flex gap-10">
-          {/* Left side with image */}
-          <div className="w-full md:w-1/2 relative">
-            {activeSection === 1 && (
-              <Image
-                src="/assets/images/fish-hatchary-images/image1.jpg"
-                alt="Business Operations"
-                width={1600} // Fixed width
-                height={900} // Fixed height
-                className="object-cover w-full h-[300px]" // Set consistent height
-              />
-            )}
-            {activeSection === 2 && (
-              <Image
-                src="/assets/images/fish-hatchary-images/image2.jpg"
-                alt="Product Category"
-                width={1600} // Fixed width
-                height={900} // Fixed height
-                className="object-cover w-full h-[300px]" // Set consistent height
-              />
-            )}
-            {activeSection === 3 && (
-              <Image
-                src="/assets/images/fish-hatchary-images/image3.jpg"
-                alt="Business Units"
-                width={1600} // Fixed width
-                height={900} // Fixed height
-                className="object-cover w-full h-[300px]" // Set consistent height
-              />
-            )}
-          </div>
-
-          {/* Right side with content */}
-          <div className="w-full md:w-1/2">
-            {activeSection === 1 && (
-              <>
-                <h3 className="text-2xl font-semibold mb-4">Business Operations</h3>
-                <p className="text-lg">
-                  Paragon Poultry operates state-of-the-art poultry farms with
-                  strict biosecurity measures to ensure the health and quality of
-                  our poultry. Our facilities are equipped with the latest technology
-                  to manage feeding, monitoring, and care.
-                </p>
-              </>
-            )}
-            {activeSection === 2 && (
-              <>
-                <h3 className="text-2xl font-semibold mb-4">Product Category</h3>
-                <p className="text-lg">
-                  We provide a variety of poultry products, including day-old
-                  layers, broilers, and colored birds. We also offer poultry meat
-                  and eggs for direct consumers, ensuring high quality and sustainability.
-                </p>
-              </>
-            )}
-            {activeSection === 3 && (
-              <>
-                <h3 className="text-2xl font-semibold mb-4">Business Units</h3>
-                <p className="text-lg">
-                  Our business units cover a wide range of services, including
-                  breeding, hatching, processing, and distribution, ensuring a
-                  streamlined operation from farm to table.
-                </p>
-              </>
-            )}
-          </div>
-        </div>
-      </section>
+      {/* Second Section */}
+      <FocusAreasFish />
     </>
   );
 };
