@@ -1,21 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SectionThree = () => {
   const activities = [
-    { title: "Poultry Farming", description: "Description of activity 1.", imageSrc: '/assets/images/cardImage1.jpg' },
-    { title: "Processing & Further Processing Plant", description: "Description of activity 2.", imageSrc: '/assets/images/processing-image/processing-header.jpg' },
-    { title: "Plastic Woven Bags & FIBC", description: "Description of activity 3.", imageSrc: '/assets/images/plastic-images/plastic-image-header.jpg' },
-    { title: "Tea Estates & Horticulture", description: "Description of activity 4.", imageSrc: '/assets/images/tea-images/tea-images-header.jpg' },
-    { title: "Bistro Cafe & Retail Shops", description: "Description of activity 5.", imageSrc: '/assets/images/bistro-images/bistro-image-header.jpg' },
-    { title: "Renewable Energy", description: "Description of activity 6.", imageSrc: '/assets/images/energy-images/energy-header.jpg' },
-    { title: "Feed Mills", description: "Description of activity 7.", imageSrc: '/assets/images/feedmil-images/header-image.jpg' },
-    { title: "Consumer Foods", description: "Description of activity 8.", imageSrc: '/assets/images/consumer-food-images/header.jpg' },
-    { title: "Fish Hatchery", description: "Description of activity 9.", imageSrc: '/assets/images/fish-hatchary-images/header.jpg' },
-    { title: "Organic Fertilizer", description: "Description of activity 10.", imageSrc: '/assets/images/organic-images/organic-card.jpg' },
-    { title: "Flour Mill", description: "Description of activity 11.", imageSrc: '/assets/images/flour-images/flour-card.jpg' },
-    { title: "Footwear Manufacturing", description: "Description of activity 12.", imageSrc: '/assets/images/footware-images/footware-card.jpg' },
-    { title: "Dairy Project", description: "Description of activity 12.", imageSrc: '/assets/images/dairy-images/dairy-card.jpg' }
+    { title: "Poultry Farming", description: "Description of activity 1.", imageSrc: '/assets/images/cardImage1.jpg', link: '/pages/business-activities/dropdown-menu/poultry-farming' },
+    { title: "Processing & Further Processing Plant", description: "Description of activity 2.", imageSrc: '/assets/images/processing-image/processing-header.jpg', link: '/pages/business-activities/dropdown-menu/processing-and-further-processing-plant' },
+    { title: "Plastic Woven Bags & FIBC", description: "Description of activity 3.", imageSrc: '/assets/images/plastic-images/plastic-image-header.jpg', link: '/pages/business-activities/dropdown-menu/plastic-woven-bags-fibc' },
+    { title: "Tea Estates & Horticulture", description: "Description of activity 4.", imageSrc: '/assets/images/tea-images/tea-images-header.jpg', link: '/pages/business-activities/dropdown-menu/tea-estates-horticulture' },
+    { title: "Bistro Cafe & Retail Shops", description: "Description of activity 5.", imageSrc: '/assets/images/bistro-images/bistro-image-header.jpg', link: '/pages/business-activities/dropdown-menu/bistro-cafe-retail-shop' },
+    { title: "Renewable Energy", description: "Description of activity 6.", imageSrc: '/assets/images/energy-images/energy-header.jpg', link: '/pages/business-activities/dropdown-menu/renewable-energy' },
+    { title: "Feed Mills", description: "Description of activity 7.", imageSrc: '/assets/images/feedmil-images/header-image.jpg', link: '/pages/business-activities/dropdown-menu/feed-mills' },
+    { title: "Consumer Foods", description: "Description of activity 8.", imageSrc: '/assets/images/consumer-food-images/header.jpg', link: '/pages/business-activities/dropdown-menu/consumer-foods/' },
+    { title: "Fish Hatchery", description: "Description of activity 9.", imageSrc: '/assets/images/fish-hatchary-images/header.jpg', link: '/pages/business-activities/dropdown-menu/fish-hatchery' },
+    { title: "Organic Fertilizer", description: "Description of activity 10.", imageSrc: '/assets/images/organic-images/organic-card.jpg', link: '/pages/business-activities/dropdown-menu/organic-fertilizer' },
+    { title: "Flour Mill", description: "Description of activity 11.", imageSrc: '/assets/images/flour-images/flour-card.jpg', link: '/pages/business-activities/dropdown-menu/flour-mill' },
+    { title: "Footwear Manufacturing", description: "Description of activity 12.", imageSrc: '/assets/images/footware-images/footware-card.jpg', link: '/pages/business-activities/dropdown-menu/footwear-manufacturing' },
+    { title: "Dairy Project", description: "Description of activity 12.", imageSrc: '/assets/images/dairy-images/dairy-card.jpg', link: '/pages/business-activities/dropdown-menu/dairy-project' }
   ];
 
   return (
@@ -42,10 +43,11 @@ const SectionThree = () => {
 
                 {/* Card Content */}
                 <div className="absolute bottom-0 left-0 right-0 w-full text-center bg-gradient-to-t from-[#0e376c] to-transparent p-6 rounded-b-lg opacity-100 group-hover:opacity-100 transition-opacity duration-300 ease-out">
-                  <h2 className="text-white text-lg font-bold uppercase transition-all duration-300 ease-out group-hover:bottom-16">
-                    {activity.title}
-                  </h2>
-                  
+                  <Link href={activity.link}>
+                    <h2 className="text-white text-lg font-bold uppercase transition-all duration-300 ease-out group-hover:bottom-16">
+                      {activity.title}
+                    </h2>
+                  </Link>
                 </div>
               </div>
             ))}
