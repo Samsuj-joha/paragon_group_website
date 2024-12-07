@@ -1,9 +1,8 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import PlasticHeader from "@/layout/plastic-header/page";
-import FocusAreasSection from "../processing-and-further-processing-plant/focus-area/page";
+import FocusAreasPlastic from "./focus-area/page";
 
 // Modal Component for Video
 const VideoModal = ({ isOpen, onClose }) => {
@@ -71,13 +70,13 @@ const PlasticWoven = () => {
             </div>
 
             <div className="w-full md:w-1/2 text-justify">
-              <h2 className="text-3xl font-semibold mb-4 ">
+              <h2 className="text-2xl font-semibold mb-4 text-[#0f5299] ">
                 Plastic Woven Bags & FIBC
               </h2>
-              <p className="text-md mb-4">
+              <p className="text-md mb-4 text-gray-700">
               In 2007, Paragon launched its first plastic woven bag manufacturing unit in the heart of Gazipur, Dhaka, manufacturing small woven bags, FIBCs, and poly bags.
               </p>
-              <p className="text-md pt-4">
+              <p className="text-md pt-4 text-gray-700">
               We are proud to serve clients across the globe to outperform the competition and stay ahead of the latest packaging innovation curve with the help of competitive pricing and modern innovation. Our factory is certified with QMS 9001 (quality management system), FSCC 22000 (Food grade), Halal certification, and SMETA. Furthermore, we strictly maintain a solid environmental policy as all our factories have a minimum to zero waste management system by recycling process waste and harvesting rainwater.
               </p>
             </div>
@@ -89,7 +88,7 @@ const PlasticWoven = () => {
       <VideoModal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* Second Section - Focus Areas */}
-      <FocusAreasSection />
+      <FocusAreasPlastic/>
     </>
   );
 };

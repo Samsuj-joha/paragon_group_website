@@ -1,13 +1,25 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-const FocusAreasSection = () => {
+const FocusAreasPlastic = () => {
   const [activeSection, setActiveSection] = useState(1);
+  const [businessOperationsImageIndex, setBusinessOperationsImageIndex] = useState(0); // To track the image for Business Operations
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
   };
+
+  // Auto Slide Effect for Business Operations
+  useEffect(() => {
+    if (activeSection === 1) {
+      const interval = setInterval(() => {
+        setBusinessOperationsImageIndex((prevIndex) => (prevIndex + 1) % 2); // Toggle between 0 and 1
+      }, 5000); // Slide every 5 seconds
+
+      return () => clearInterval(interval); // Clean up on component unmount or when the section changes
+    }
+  }, [activeSection]);
 
   return (
     <section className="py-16">
@@ -118,17 +130,20 @@ const FocusAreasSection = () => {
         {/* Right side with image */}
         <div className="w-full md:w-1/2 relative order-1 md:order-2">
           {activeSection === 1 && (
-            <Image
-              src="/assets/images/processing-image/focus1.jpg"
-              alt="Business Operations"
-              width={1600}
-              height={900}
-              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
-            />
+            <div className="relative">
+              {/* Business Operations Auto-Sliding */}
+              <Image
+                src={`/assets/images/plastic-images/plastic-image${businessOperationsImageIndex + 1}.jpg`} // Corrected the image path
+                alt="Business Operations"
+                width={1600}
+                height={900}
+                className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
+              />
+            </div>
           )}
           {activeSection === 2 && (
             <Image
-              src="/assets/images/processing-image/focus2.jpg"
+              src="/assets/images/plastic-images/plastic-image4.jpg"
               alt="Product Category"
               width={1600}
               height={900}
@@ -137,7 +152,7 @@ const FocusAreasSection = () => {
           )}
           {activeSection === 3 && (
             <Image
-              src="/assets/images/processing-image/focus4.png"
+              src="/assets/images/plastic-images/plastic-image5.png"
               alt="Business Units"
               width={1600}
               height={900}
@@ -149,5 +164,4 @@ const FocusAreasSection = () => {
     </section>
   );
 };
-
-export default FocusAreasSection;
+export default FocusAreasPlastic;
