@@ -12,7 +12,7 @@ const FocusAreasPoultry = () => {
     <section className="py-16 px-4 sm:px-6 md:px-8">
       {/* Header */}
       <div className="container mx-auto text-center mb-10">
-        <h2 className="text-md sm:text-xl md:text-2xl font-semibold mb-8 text-[#2772b8]">Our Focus Areas</h2>
+        <h2 className="text-md sm:text-xl md:text-2xl font-semibold mb-4 text-[#2772b8]">Our Focus Areas</h2>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
           {["Business Operations", "Product Category", "Business Units"].map((title, index) => (
             <button

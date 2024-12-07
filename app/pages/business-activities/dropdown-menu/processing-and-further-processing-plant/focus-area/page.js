@@ -59,13 +59,13 @@ const FocusAreasSection = () => {
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
                 Business Operations
               </h3>
-              <p className="text-lg text-gray-700">
+              <p className="text-md text-gray-700">
                 Paragon has two different plants for processing and further
                 processing units. Both units are located in Ashulia, Savar.
                 Paragon has its own delivery chain through which it is
                 delivering its products to consumers' end. Currently processing
               </p>
-              <ul className="pt-4 list-decimal pl-5">
+              <ul className="pt-4 list-decimal pl-5 text-gray-700">
                 <li>
                   Process Chicken production capacity: 1000 pcs birds dressed
                   per hour.
@@ -82,7 +82,7 @@ const FocusAreasSection = () => {
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
                 Product Category
               </h3>
-              <p className="text-lg text-gray-700 py-1">
+              <p className="text-md text-gray-700 py-1">
                 In Paragon Agro’s process & further process unit, varieties of
                 products are being processed in different forms, like
               </p>
