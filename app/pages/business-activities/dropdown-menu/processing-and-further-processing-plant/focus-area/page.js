@@ -12,38 +12,38 @@ const FocusAreasSection = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto text-center mb-10 px-4">
-        <h2 className="text-3xl font-semibold mb-4 text-blue-800">
+        <h2 className="text-2xl font-semibold mb-4 text-blue-800">
           Our Focus Areas
         </h2>
-        <div className="flex justify-center gap-10 flex-wrap mb-6">
+        <div className="flex justify-center gap-6 flex-wrap mb-6">
           {/* Header buttons */}
           <button
             onClick={() => handleSectionClick(1)}
-            className={`text-xl px-6 py-2 rounded-md transition duration-300 ${
+            className={`transition-all duration-300 text-md px-4 py-2 rounded-md transform ${
               activeSection === 1
-                ? "bg-[#faa919] text-white"
-                : "bg-gray-200 text-black"
-            } hover:bg-[#0b54a1] hover:text-white`}
+                ? "bg-[#faa919] text-white scale-105 shadow-lg"
+                : "bg-gray-200 text-black hover:bg-[#0b54a1] hover:text-white"
+            }`}
           >
             Business Operations
           </button>
           <button
             onClick={() => handleSectionClick(2)}
-            className={`text-xl px-6 py-2 rounded-md transition duration-300 ${
+            className={`transition-all duration-300 text-md px-4 py-2 rounded-md transform ${
               activeSection === 2
-                ? "bg-[#faa919] text-white"
-                : "bg-gray-200 text-black"
-            } hover:bg-[#0b54a1] hover:text-white`}
+                ? "bg-[#faa919] text-white scale-105 shadow-lg"
+                : "bg-gray-200 text-black hover:bg-[#0b54a1] hover:text-white"
+            }`}
           >
             Product Category
           </button>
           <button
             onClick={() => handleSectionClick(3)}
-            className={`text-xl px-6 py-2 rounded-md transition duration-300 ${
+            className={`transition-all duration-300 text-md px-4 py-2 rounded-md transform ${
               activeSection === 3
-                ? "bg-[#faa919] text-white"
-                : "bg-gray-200 text-black"
-            } hover:bg-[#0b54a1] hover:text-white`}
+                ? "bg-[#faa919] text-white scale-105 shadow-lg"
+                : "bg-gray-200 text-black hover:bg-[#0b54a1] hover:text-white"
+            }`}
           >
             Business Units
           </button>
@@ -52,39 +52,8 @@ const FocusAreasSection = () => {
 
       {/* Conditional Content Rendering based on Active Section */}
       <div className="container mx-auto flex flex-col md:flex-row gap-10 px-4">
-        {/* Left side with image */}
-        <div className="w-full md:w-1/2 relative">
-          {activeSection === 1 && (
-            <Image
-              src="/assets/images/processing-image/focus1.jpg"
-              alt="Business Operations"
-              width={1600}
-              height={900}
-              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
-            />
-          )}
-          {activeSection === 2 && (
-            <Image
-              src="/assets/images/processing-image/focus2.jpg"
-              alt="Product Category"
-              width={1600}
-              height={900}
-              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
-            />
-          )}
-          {activeSection === 3 && (
-            <Image
-              src="/assets/images/processing-image/focus4.png"
-              alt="Business Units"
-              width={1600}
-              height={900}
-              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
-            />
-          )}
-        </div>
-
-        {/* Right side with content */}
-        <div className="w-full md:w-1/2 text-justify">
+        {/* Left side with content */}
+        <div className="w-full md:w-1/2 text-justify order-2 md:order-1">
           {activeSection === 1 && (
             <>
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
@@ -92,8 +61,8 @@ const FocusAreasSection = () => {
               </h3>
               <p className="text-lg text-gray-700">
                 Paragon has two different plants for processing and further
-                processing units. Both units are located in Ashulia, Savar. 
-                Paragon has its own delivery chain through which it is 
+                processing units. Both units are located in Ashulia, Savar.
+                Paragon has its own delivery chain through which it is
                 delivering its products to consumers' end. Currently processing
               </p>
               <ul className="pt-4 list-decimal pl-5">
@@ -143,6 +112,37 @@ const FocusAreasSection = () => {
                 <li>Dry Food Unit</li>
               </ul>
             </>
+          )}
+        </div>
+
+        {/* Right side with image */}
+        <div className="w-full md:w-1/2 relative order-1 md:order-2">
+          {activeSection === 1 && (
+            <Image
+              src="/assets/images/processing-image/focus1.jpg"
+              alt="Business Operations"
+              width={1600}
+              height={900}
+              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
+            />
+          )}
+          {activeSection === 2 && (
+            <Image
+              src="/assets/images/processing-image/focus2.jpg"
+              alt="Product Category"
+              width={1600}
+              height={900}
+              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
+            />
+          )}
+          {activeSection === 3 && (
+            <Image
+              src="/assets/images/processing-image/focus4.png"
+              alt="Business Units"
+              width={1600}
+              height={900}
+              className="object-cover w-full h-[300px] rounded-lg shadow-md transform transition-all hover:scale-105"
+            />
           )}
         </div>
       </div>

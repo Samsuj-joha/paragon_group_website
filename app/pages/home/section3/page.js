@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const SectionThree = () => {
   const activities = [
@@ -118,9 +119,10 @@ const SectionThree = () => {
                     <h2 className="text-white text-md font-semibold uppercase tracking-wide">
                       {activity.title}
                     </h2>
-                    <p className="text-sm text-gray-200 mt-2">
-                      Explore more about this activity.
-                    </p>
+                    <button className="flex items-center text-sm text-gray-200 mt-2 hover:underline cursor-pointer">
+                      See More
+                      <ArrowRight className="ml-2" size={16} />
+                    </button>
                   </Link>
                 </div>
               </div>
