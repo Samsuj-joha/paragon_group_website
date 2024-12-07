@@ -18,12 +18,12 @@ const Csr = () => {
       <section className="bg-gray-100 py-8 sm:py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 text-center">
           {/* Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#123f8e] mb-4">
+          <h1 className="text-lg sm:textxl md:text-4xl lg:text-3xl font-bold text-[#123f8e] mb-4">
             CORPORATE SOCIAL RESPONSIBILITIES
           </h1>
 
           {/* Border */}
-          <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#fab803] mx-auto mb-6"></div>
+          <div className="w-16 sm:w-20 lg:w-40 h-1 bg-[#fab803] mx-auto mb-6"></div>
 
           {/* CSR Image and Content */}
           <div className="flex flex-col lg:flex-row items-start lg:items-start justify-between gap-6 md:gap-8 lg:gap-12">
@@ -54,7 +54,7 @@ const Csr = () => {
               </p>
 
               {/* Subheading */}
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#123f8e] mb-6 text-center lg:text-left">
+              <h3 className="text-xl sm:text-lg md:text-xl font-bold text-[#123f8e] mb-6 text-center lg:text-left">
                 SOME OF OUR ACTIVITIES
               </h3>
 
@@ -99,7 +99,7 @@ const Csr = () => {
         <div className="container mx-auto px-4">
           {/* Section Heading */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#123f8e] mb-6">
+            <h2 className="text-xl md:text-2xl font-bold text-[#123f8e] mb-6">
               Our Focus Areas
             </h2>
           </div>
