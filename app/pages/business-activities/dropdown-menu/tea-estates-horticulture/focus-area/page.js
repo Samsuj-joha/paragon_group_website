@@ -13,14 +13,14 @@ const FocusAreas = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto text-center mb-10">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Our Focus Areas</h2>
-        <div className="flex flex-wrap justify-center gap-4 md:gap-10">
+        <h2 className="text-2xl font-semibold text-[#2772b8] mb-4">Our Focus Areas</h2>
+        <div className="flex flex-wrap justify-center gap-2 md:gap-10">
           {/* Header buttons */}
           <motion.button
             onClick={() => handleSectionClick(1)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-md px-4 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 1
-                ? "bg-blue-500 text-white"
+                ? "bg-[#2772b8] text-white"
                 : "bg-gray-200 text-black"
             }`}
             whileHover={{ scale: 1.05 }}
@@ -30,9 +30,9 @@ const FocusAreas = () => {
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(2)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-md px-4 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 2
-                ? "bg-blue-500 text-white"
+                ? "bg-[#2772b8] text-white"
                 : "bg-gray-200 text-black"
             }`}
             whileHover={{ scale: 1.05 }}
@@ -42,9 +42,9 @@ const FocusAreas = () => {
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(3)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-md px-4 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 3
-                ? "bg-blue-500 text-white"
+                ? "bg-[#2772b8] text-white"
                 : "bg-gray-200 text-black"
             }`}
             whileHover={{ scale: 1.05 }}
@@ -57,7 +57,61 @@ const FocusAreas = () => {
 
       {/* Conditional Content Rendering based on Active Section */}
       <div className="container mx-auto flex flex-col md:flex-row gap-10">
-        {/* Left side with image */}
+        {/* Left side with content */}
+        <div className="w-full md:w-1/2">
+          {activeSection === 1 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-[#2772b8]">
+                Business Operations
+              </h3>
+              <p className="text-md text-gray-500 pb-5 text-justify">
+                Paragon has four different plants for tea cultivation. All units are located in Sylhet. Paragon has its own delivery chain through which it delivers products to the consumer's end. Currently processing:
+              </p>
+              <li className="text-md text-gray-500 text-justify">Tea Packing Unit capacity: 100 tons production capacity per day.</li>
+            </motion.div>
+          )}
+          {activeSection === 2 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-[#2772b8]">
+                Product Category
+              </h3>
+              <p className="text-lg text-gray-600 text-justify">
+                In Paragon Agro’s process & further process unit, varieties of products are being processed in different forms, like:
+              </p>
+              <p>
+                <strong>Tea Packing unit:</strong> Tea BOP, Tea PD, Tea CD, Tea DUST, Exotic Tea, Tea Bag, etc.
+              </p>
+            </motion.div>
+          )}
+          {activeSection === 3 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-xl font-semibold mb-4 text-[#2772b8]">
+                Business Units
+              </h3>
+              <p className="text-lg text-gray-600">Tea Estates</p>
+              <ol className="text-md text-gray-600 list-decimal ml-10">
+                <li>Hazinagar Tea Estate, Moulvibazar</li>
+                <li>Rahmania Tea Estate, Moulvibazar</li>
+                <li>Fatehabad Tea Estate, Moulvibazar</li>
+                <li>Voban Tea Estate, Hobigong</li>
+              </ol>
+            </motion.div>
+          )}
+        </div>
+
+        {/* Right side with image */}
         <div className="w-full md:w-1/2 relative">
           <motion.div
             key={activeSection}
@@ -94,60 +148,6 @@ const FocusAreas = () => {
               />
             )}
           </motion.div>
-        </div>
-
-        {/* Right side with content */}
-        <div className="w-full md:w-1/2">
-          {activeSection === 1 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Business Operations
-              </h3>
-              <p className="text-md text-gray-500 pb-5">
-              Paragon has four different plant for Tea cultivation. All units located in Sylhet. Paragon has its own delivery chain through which it is delivering its products to consumers end. Currently processing
-              </p>
-              <li className="text-md text-gray-500">Tea Packing Unit capacity: 100 ton production capacity per day.</li>
-            </motion.div>
-          )}
-          {activeSection === 2 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Product Category
-              </h3>
-              <p className="text-lg text-gray-600">
-              In Paragon Agro’s process & further process unit, varieties of product are being processed in different form. Like
-              </p>
-              <p><strong>Tea Packing unit:</strong> Tea BOP, Tea PD, Tea CD, Tea DUST, Exotic Tea, Tea Bag etc</p>
-            </motion.div>
-          )}
-          {activeSection === 3 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Business Units
-              </h3>
-              <p className="text-lg text-gray-600">
-              Tea Estates
-              </p>
-              <ol className="text-md text-gray-600 list-decimal ml-10">
-                <li>Hazinagar Tea Estate, Mouluvibazar</li>
-                <li>Rahmania Tea Estate, Mouluvibazar</li>
-                <li>Fatehabad Tea Estate, Mouluvibazar</li>
-                <li>Voban Tea Estate, hobigong</li>
-              </ol>
-            </motion.div>
-          )}
         </div>
       </div>
     </section>

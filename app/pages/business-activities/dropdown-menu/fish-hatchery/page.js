@@ -46,7 +46,7 @@ const Fish = () => {
       {/* First Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-10 items-center">
+          <div className="flex flex-col md:flex-row gap-10">
             {/* Left Section (Image with Video Modal Trigger) */}
             <motion.div
               initial={{ x: -50, opacity: 0 }}
@@ -79,7 +79,7 @@ const Fish = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl font-semibold mb-4">Fish Hatchery</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-[#2772b8]">Fish Hatchery</h2>
               <p className="text-md mb-4 text-gray-600 text-justify">
                 A fish hatchery is a place for artificial breeding, hatching, and rearing through the early life stages of animals such as finfish and shellfish. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size.
               </p>

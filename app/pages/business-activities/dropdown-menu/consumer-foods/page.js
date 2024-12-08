@@ -48,11 +48,11 @@ const Consumer = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl font-semibold mb-4">Consumer Foods</h2>
-              <p className="text-md mb-4 text-justify">
+              <h2 className="text-2xl font-semibold mb-4 text-[#2772b8]">Consumer Foods</h2>
+              <p className="text-md mb-4 text-justify text-gray-700">
               Consumer food division under Paragon Agro Limited, a subsidiary of the Paragon Group, produces and distributes high-quality animal feed. Utilizing modern technologies and sustainable practices, the company is committed to providing safe, healthy, and nutritious feed that meets international standards. With a skilled team of professionals, Paragon Agro offers reliable and efficient service to its customers worldwide. As part of the Paragon Group, the company has access to the resources and expertise of a diversified conglomerate. Through a commitment to innovation, sustainability, and animal welfare, Paragon Agro is positioned for continued growth and success in the global agribusiness industry.
               </p>
-              <p className="text-md text-justify">
+              <p className="text-md text-justify text-gray-700">
               Our factory has ISO 22000, GMP, HACCP, and HALAL certifications. We proudly serve all multinational hotels, fast food brands like KFC and Pizza Hut, and local airlines. Furthermore, we also launched a collection of traditional and Western-inspired ready-to-eat/cook frozen products.
               </p>
             </motion.div>

@@ -13,12 +13,12 @@ const FocusAreasEnergy = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto text-center mb-10">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">Our Focus Areas</h2>
-        <div className="flex flex-wrap justify-center gap-4 md:gap-10">
+        <h2 className="text-2xl font-semibold text-[#2772b8] mb-4">Our Focus Areas</h2>
+        <div className="flex flex-wrap justify-center gap-2 md:gap-10">
           {/* Header buttons */}
           <motion.button
             onClick={() => handleSectionClick(1)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-xl px-2 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 1
                 ? "bg-blue-500 text-white"
                 : "bg-gray-200 text-black"
@@ -30,7 +30,7 @@ const FocusAreasEnergy = () => {
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(2)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-xl px-2 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 2
                 ? "bg-blue-500 text-white"
                 : "bg-gray-200 text-black"
@@ -42,7 +42,7 @@ const FocusAreasEnergy = () => {
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(3)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-xl px-2 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 3
                 ? "bg-blue-500 text-white"
                 : "bg-gray-200 text-black"
@@ -104,7 +104,7 @@ const FocusAreasEnergy = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+              <h3 className="text-xl font-semibold mb-4 text-[#2772b8]">
                 Business Operations
               </h3>
               <p className="text-md text-gray-500 pb-5">
@@ -126,7 +126,7 @@ const FocusAreasEnergy = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+              <h3 className="text-xl font-semibold mb-4 text-[#2772b8]">
               System description & Status of the plant
               </h3>
               <p className="text-md text-gray-600 text-justify">
@@ -157,7 +157,7 @@ const FocusAreasEnergy = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+              <h3 className="text-xl font-semibold mb-4 text-[#2772b8]">
                 Business Units
               </h3>
               <p className="text-lg text-gray-600">

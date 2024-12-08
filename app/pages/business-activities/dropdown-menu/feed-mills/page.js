@@ -89,8 +89,8 @@ const FeedMills = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl font-semibold mb-4">Feed Mills</h2>
-              <p className="text-md mb-4 text-justify">
+              <h2 className="text-2xl font-semibold mb-4 text-[#2772b8]">Feed Mills</h2>
+              <p className="text-md mb-4 text-justify text-gray-700">
                 Paragon, is a leading brand in the national market for poultry,
                 cattle, and marine life feed. It is by operation and customer
                 base, one of the largest agro-based industries in Bangladesh.
