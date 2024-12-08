@@ -11,7 +11,8 @@ const AquaBreedersLtd = () => {
       <AquaHeader />
       <section className="py-16 bg-gradient-to-b from-white to-gray-100">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col-reverse md:flex-row gap-10">
+          <div className="flex flex-col-reverse md:flex-row gap-10 "> {/* Add border here */}
+            
             {/* Image Section */}
             <motion.div
               className="w-full md:w-1/2 relative"
@@ -33,15 +34,15 @@ const AquaBreedersLtd = () => {
 
             {/* Text Section */}
             <motion.div
-              className="w-full md:w-1/2 text-center md:text-left"
+              className="w-full md:w-1/2 text-center md:text-left  lg:border-l-[4px] border-[#f99d19] px-5"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
             >
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-gray-800">
+              <h2 className="text-xl lg:text-2xl font-bold mb-6 text-[#2772b8]">
                 Aqua Breeders Ltd.
               </h2>
-              <p className="text-md lg:text-lg text-gray-600 leading-relaxed text-justify">
+              <p className="text-md lg:text-md text-gray-600 leading-relaxed text-justify">
                 Aqua Breeders Limited is a subsidiary of the Paragon Group,
                 specializing in high-quality fish and shrimp breeding for
                 commercial purposes. It operates modern aquaculture facilities
