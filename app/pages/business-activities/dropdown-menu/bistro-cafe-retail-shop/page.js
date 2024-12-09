@@ -74,7 +74,7 @@ const BistroCafe = () => {
 
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-justify">
-              <h2 className="text-3xl font-semibold mb-4 text-gray-800">
+              <h2 className="text-xl font-semibold mb-4 text-[#2772b8]">
                 Bistro Cafe & Retail Shops
               </h2>
               <p className="text-md mb-4 text-gray-600">

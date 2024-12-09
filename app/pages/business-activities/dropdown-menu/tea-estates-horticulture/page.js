@@ -43,10 +43,10 @@ const TeaEstate = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <h2 className="text-4xl font-semibold text-gray-800 mb-4">
+              <h2 className="text-2xl font-semibold text-[#2772b8] mb-4">
                 Tea Estates & Horticulture
               </h2>
-              <p className="text-lg mb-6 text-gray-600 leading-relaxed text-justify">
+              <p className="text-md mb-6 text-gray-600 leading-relaxed text-justify">
                 {" "}
                 {/* Justified text for paragraph */}
                 Established in 1993, Paragon Poultry is one of the top three
@@ -55,7 +55,7 @@ const TeaEstate = () => {
                 hazards and pollution to facilitate the best environment for
                 high-quality day-old poultry.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed text-justify">
+              <p className="text-md text-gray-600 leading-relaxed text-justify">
                 {" "}
                 {/* Justified text for paragraph */}
                 Furthermore, we also produce commercial layers and broilers for

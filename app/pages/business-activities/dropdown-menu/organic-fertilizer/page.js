@@ -47,7 +47,7 @@ const Organic = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl font-semibold mb-4">Organic Fertilizer</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-[#2772b8]">Organic Fertilizer</h2>
               <p className="text-md text-justify mb-4 text-gray-600">
                 With growth comes responsibility. In 2020, Paragon launched its first organic fertilizer project. Channeling all organic waste to this project, Paragon takes another step toward improving its ecological footprint with another environmentally friendly initiative.
               </p>

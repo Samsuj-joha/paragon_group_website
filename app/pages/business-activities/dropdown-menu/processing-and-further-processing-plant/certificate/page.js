@@ -46,7 +46,7 @@ const CertificateSection = () => {
                 alt="Certification 1"
                 width={250} // Width of image
                 height={120} // Reduced height for the image
-                className="w-full object-cover rounded-t-lg"
+                className="w-full h-96 object-contain rounded-t-lg"
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ const CertificateSection = () => {
                 alt="Certification 2"
                 width={250} // Width of image
                 height={120} // Reduced height for the image
-                className="w-full object-cover rounded-t-lg"
+                className="w-full h-96 object-contain rounded-t-lg"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ const CertificateSection = () => {
                 alt="Certification 3"
                 width={250} // Width of image
                 height={120} // Reduced height for the image
-                className="w-full object-cover rounded-t-lg"
+                className="w-full h-96 object-contain rounded-t-lg"
               />
             </div>
           </div>

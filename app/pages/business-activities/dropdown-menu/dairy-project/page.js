@@ -47,7 +47,7 @@ const Dairy = () => {
 
             <div className="w-full md:w-1/2">
               <motion.h2
-                className="text-3xl font-semibold mb-4 text-gray-800"
+                className="text-2xl font-semibold mb-4 text-[#2772b8]"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
@@ -55,7 +55,7 @@ const Dairy = () => {
                 Dairy Project
               </motion.h2>
               <motion.p
-                className="text-lg mb-4 text-justify text-gray-600"
+                className="text-md mb-4 text-justify text-gray-600"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}

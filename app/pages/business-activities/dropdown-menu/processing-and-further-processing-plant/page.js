@@ -69,7 +69,7 @@ const ProcessingPlant = () => {
             </div>
 
             <div className="w-full md:w-1/2">
-              <h2 className="text-xl font-semibold mb-4 text-blue-800">Processing and Further Processing Plant</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-[#0f5299]">Processing and Further Processing Plant</h2>
               <p className="text-md mb-4 text-gray-700 text-justify">
                 Paragon launched a poultry processing and further processing plant in 2015, producing ready-to-cook and ready-to-eat frozen foods.
               </p>

@@ -87,10 +87,10 @@ const Footware = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-semibold mb-4 text-gray-800">
+            <h2 className="text-2xl font-semibold mb-4 text-[#2772b8]">
               Footwear Manufacturing
             </h2>
-            <p className="text-lg text-gray-600 mb-4 leading-relaxed text-justify">
+            <p className="text-md text-gray-600 mb-4 leading-relaxed text-justify">
               Established in 2018, ParaSole Footwear limited is a fully compliant
               factory as per Bangladesh government labor law. We develop footwear
               from sketches, pictures, or concepts. ParaSole ensures products meet

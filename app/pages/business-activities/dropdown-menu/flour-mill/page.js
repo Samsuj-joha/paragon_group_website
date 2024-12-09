@@ -41,7 +41,7 @@ const FlourMill = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl font-semibold mb-4">Flour Mill</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-[#2772b8]">Flour Mill</h2>
               <p className="text-md text-justify mb-4 text-gray-600">
                 Paragon launches a fully integrated flour mill producing for
                 direct consumer through the brand Paragon Atta, Paragon Maida,

@@ -13,16 +13,16 @@ const FocusAreasFeed = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto text-center mb-10">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+        <h2 className="text-2xl font-semibold text-[#2772b8] mb-4">
           Our Focus Areas
         </h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-10">
           {/* Header buttons */}
           <motion.button
             onClick={() => handleSectionClick(1)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-xl px-4 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 1
-                ? "bg-blue-500 text-white"
+                ? "bg-[#2772b8] text-white"
                 : "bg-gray-200 text-black"
             }`}
             whileHover={{ scale: 1.05 }}
@@ -32,9 +32,9 @@ const FocusAreasFeed = () => {
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(2)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-xl px-4 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 2
-                ? "bg-blue-500 text-white"
+                ? "bg-[#2772b8] text-white"
                 : "bg-gray-200 text-black"
             }`}
             whileHover={{ scale: 1.05 }}
@@ -44,9 +44,9 @@ const FocusAreasFeed = () => {
           </motion.button>
           <motion.button
             onClick={() => handleSectionClick(3)}
-            className={`text-xl px-6 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
+            className={`text-xl px-4 py-2 rounded-md transition-colors duration-300 w-full sm:w-auto ${
               activeSection === 3
-                ? "bg-blue-500 text-white"
+                ? "bg-[#2772b8] text-white"
                 : "bg-gray-200 text-black"
             }`}
             whileHover={{ scale: 1.05 }}
@@ -59,7 +59,103 @@ const FocusAreasFeed = () => {
 
       {/* Conditional Content Rendering based on Active Section */}
       <div className="container mx-auto flex flex-col md:flex-row gap-10">
-        {/* Left side with image */}
+        {/* Left side with content */}
+        <div className="w-full md:w-1/2">
+          {activeSection === 1 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                Business Operations
+              </h3>
+              <p className="text-md text-gray-500 pb-5">
+                In total, Paragon Group runs 16 lines in 6 locations under its
+                concerns. Those are-
+              </p>
+              <ul className="list-disc pl-5 text-sm text-gray-500 space-y-2">
+                <li>Paragon Poultry Limited (Feed division), Gazipur.</li>
+                <li>Denm Poultry Limited (Feed division), Kapasia.</li>
+                <li>Paragon Feed Limited, (Unit-2), Savar.</li>
+                <li>Jessore Feed Limited, Jessore.</li>
+                <li>Chittagong Feed Limited, Chattogram.</li>
+                <li>Rangpur Poultry Limited (Feed division), Rangpur.</li>
+              </ul>
+              <p className="text-md text-gray-500 pt-5">
+                The company’s operations are spread throughout the country, with
+                plans to expand more operational units in the future.
+              </p>
+            </motion.div>
+          )}
+          {activeSection === 2 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                Product Category
+              </h3>
+              <p className="text-md text-gray-600 text-justify">
+                Paragon is producing a wide range of feed in Poultry, Fish, and
+                Cattle industries.
+              </p>
+              <ul className="list-decimal pl-5 text-sm text-gray-500 space-y-2">
+                <li>
+                  <strong>Poultry Feed:</strong> Boiler feed, Layer feed &
+                  Sonali feed.
+                </li>
+                <li>
+                  <strong>Fish Feed:</strong> Floating fish feed & Sinking fish
+                  feed.
+                </li>
+                <li>
+                  <strong>Shrimp Feed.</strong>
+                </li>
+                <li>
+                  <strong>Cattle Feed:</strong> Lactating feed & Fattening
+                  feed.
+                </li>
+                <li>
+                  <strong>Duck Feed.</strong>
+                </li>
+                <li>
+                  <strong>Quail Feed.</strong>
+                </li>
+              </ul>
+            </motion.div>
+          )}
+          {activeSection === 3 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
+                Business Units
+              </h3>
+              <p className="text-md text-gray-500 pb-5">
+                In total, Paragon Group runs 16 lines in 6 locations under its
+                concerns. Those are-
+              </p>
+              <ul className="list-disc pl-5 text-sm text-gray-500 space-y-2">
+                <li>Paragon Poultry Limited (Feed division), Gazipur.</li>
+                <li>Denm Poultry Limited (Feed division), Kapasia.</li>
+                <li>Paragon Feed Limited, (Unit-2), Savar.</li>
+                <li>Jessore Feed Limited, Jessore.</li>
+                <li>Chittagong Feed Limited, Chattogram.</li>
+                <li>Rangpur Poultry Limited (Feed division), Rangpur.</li>
+              </ul>
+              <p className="text-md text-gray-500 pt-5">
+                The company’s operations are spread throughout the country, with
+                plans to expand more operational units in the future.
+              </p>
+            </motion.div>
+          )}
+        </div>
+
+        {/* Right side with image */}
         <div className="w-full md:w-1/2 relative">
           <motion.div
             key={activeSection}
@@ -96,139 +192,6 @@ const FocusAreasFeed = () => {
               />
             )}
           </motion.div>
-        </div>
-
-        {/* Right side with content */}
-        <div className="w-full md:w-1/2">
-          {activeSection === 1 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Business Operations
-              </h3>
-              <p className="text-md text-gray-500 pb-5">
-                In total, Paragon Group runs 16 lines in 6 locations under its
-                concerns. Those are-
-              </p>
-
-              <li className="text-sm text-gray-500">
-                {" "}
-                Paragon Poultry Limited (Feed division), Gazipur.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Denm Poultry Limited (Feed division), Kapasia.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Paragon Feed Limited, (Unit-2), Savar.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Jessore Feed Limited, Jessore.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Chittagong Feed Limited, Chattogram.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Rangpur Poultry Limited (Feed division), Rangpur.
-              </li>
-              <p className="text-md text-gray-500 pt-5">
-                The company’s operations are spread throughout the country, with
-                plans to expand more operational units in the future.
-              </p>
-            </motion.div>
-          )}
-          {activeSection === 2 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Product Category
-              </h3>
-              <p className="text-md text-gray-600 text-justify">
-                Paragon is producing wide range of feed in Poultry, Fish and
-                Cattle industry.
-              </p>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Poultry Feed –</strong> Boiler feed, Layer feed & Sonali
-                feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong> Fish Feed– </strong>Flouting fish feed & Sinking fish
-                feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Shrimp Feed.</strong>
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Cattle Feed–</strong> Lactating feed & Fattening feed.
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Duck Feed.</strong>
-              </li>
-              <li className="text-sm text-gray-500 list-decimal">
-                {" "}
-                <strong>Quail Feed.</strong>
-              </li>
-            </motion.div>
-          )}
-          {activeSection === 3 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-                Business Units
-              </h3>
-              <p className="text-md text-gray-500 pb-5">
-                In total, Paragon Group runs 16 lines in 6 locations under its
-                concerns. Those are-
-              </p>
-
-              <li className="text-sm text-gray-500">
-                {" "}
-                Paragon Poultry Limited (Feed division), Gazipur.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Denm Poultry Limited (Feed division), Kapasia.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Paragon Feed Limited, (Unit-2), Savar.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Jessore Feed Limited, Jessore.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Chittagong Feed Limited, Chattogram.
-              </li>
-              <li className="text-sm text-gray-500">
-                {" "}
-                Rangpur Poultry Limited (Feed division), Rangpur.
-              </li>
-              <p className="text-md text-gray-500 pt-5">
-                The company’s operations are spread throughout the country, with
-                plans to expand more operational units in the future.
-              </p>
-            </motion.div>
-          )}
         </div>
       </div>
     </section>

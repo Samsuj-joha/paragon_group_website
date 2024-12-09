@@ -36,7 +36,7 @@ const RenewaleEnergy = () => {
 
             {/* Text Section */}
             <div className="w-full md:w-1/2 flex flex-col ">
-              <h2 className="text-3xl font-semibold mb-4 text-gray-800 transition-all duration-500 transform hover:translate-x-2">
+              <h2 className="text-2xl font-semibold mb-4 text-[#2772b8] transition-all duration-500 transform hover:translate-x-2">
                 Renewable Energy
               </h2>
               <p className="text-md mb-4 text-justify text-gray-600">
